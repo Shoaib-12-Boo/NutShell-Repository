@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Interview Section</title>
+
+
+</head>
+
+<body>
+<style>
+/* ===== Section Background ===== */
+.ai-interview-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(180deg, #a8d6f3 0%, #cfe9fb 100%);
+}
+
+/* ===== Card ===== */
+.ai-interview-card {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 4px 1px 0px 8px #6fb1e3;
+}
+
+/* ===== Title ===== */
+.ai-interview-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #2E3C4E;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.ai-step-number {
+  color: #1976d2;
+}
+
+.ai-interview-subtitle {
+  text-align: center;
+  font-size: 22px;
+  color: #2E3C4E;
+  margin-bottom: 28px;
+}
+
+/* ===== Features Grid ===== */
+.ai-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+/* ===== Feature Item ===== */
+.ai-feature-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #e3f2fd;
+  padding: 10px 22px 10px 12px;
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #0d47a1;
+
+  overflow: visible;
+}
+
+/* smooth rounded extension (EXACT SHAPE) */
+.ai-feature-item::after {
+  content: "";
+  position: absolute;
+  right: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 48px;
+  height: 48px;
+
+  background: #e3f2fd;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* ===== Icon ===== */
+.ai-feature-icon {
+  width: 28px;
+  height: 28px;
+  background: #bbdefb;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* ===== Text ===== */
+.ai-feature-text {
+  white-space: nowrap;
+  line-height: 1;
+  font-size: 14px;
+  color: #2E3C4E;
+}
+
+/* ===== Image ===== */
+.ai-image-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ai-interview-image {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .ai-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-feature-item::after {
+    display: none;
+  }
+
+  .ai-interview-card {
+    padding: 20px;
+  }
+}
+</style>
+<div class="ai-interview-section">
+  <div class="ai-interview-card">
+
+    <h2 class="ai-interview-title">
+      <span class="ai-step-number">6. Powerful </span>AI Interview Simulations
+    </h2>
+
+    <p class="ai-interview-subtitle">Practice:</p>
+
+    <div class="ai-feature-grid">
+      <div class="ai-feature-item">
+        <span class="ai-feature-icon">💬</span>
+        <span class="ai-feature-text">Interview Skills</span>
+      </div>
+
+      <div class="ai-feature-item">
+        <span class="ai-feature-icon">💼</span>
+        <span class="ai-feature-text">Professional Interview Scenarios</span>
+      </div>
+
+      <div class="ai-feature-item">
+        <span class="ai-feature-icon">🧘</span>
+        <span class="ai-feature-text">Reducing Anxiety</span>
+      </div>
+
+      <div class="ai-feature-item">
+        <span class="ai-feature-icon">✔</span>
+        <span class="ai-feature-text">Job Readiness</span>
+      </div>
+    </div>
+
+    <div class="ai-image-wrapper">
+      <img src="section12.png" alt="AI Interview Simulation" class="ai-interview-image">
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

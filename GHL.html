@@ -1,0 +1,3437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- section 1 css -->
+    <style>
+      .kv-wrapper {
+        background: linear-gradient(180deg, #9fd0ef 0%, #cfe9f7 100%);
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column; /* 👈 IMPORTANT */
+        align-items: center;
+        gap: 60px; /* 👈 space between both cards */
+      }
+
+      .kv-card {
+        background: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 35px 40px;
+        text-align: center;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .kv-title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.35;
+        color: #384653;
+        margin-bottom: 16px;
+        font-family: "barlow";
+      }
+
+      .kv-image-box {
+        border-radius: 12px;
+        overflow: hidden;
+        margin-bottom: 16px;
+      }
+
+      .kv-image {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .kv-description {
+        font-size: 18px;
+        font-weight: 700;
+        color: #384653;
+        margin-bottom: 6px;
+        text-align: justify;
+      }
+
+      .kv-tags {
+        font-size: 18px;
+        color: #6b7280;
+        margin-bottom: 10px;
+        text-align: justify;
+      }
+
+      .kv-highlight {
+        font-size: 18px;
+        color: #2563eb;
+        font-weight: 700;
+        margin-bottom: 10px;
+        text-align: justify;
+      }
+
+      .kv-mission {
+        font-size: 18px;
+        color: #374151;
+        line-height: 1.5;
+        margin-bottom: 12px;
+        text-align: justify;
+      }
+
+      .kv-offer {
+        font-size: 18px;
+        font-weight: 700;
+        color: #384653;
+        margin-bottom: 16px;
+        text-align: justify;
+      }
+
+      .kv-buttons {
+        display: flex;
+        gap: 10px;
+        /* justify-content: center; */
+        flex-wrap: wrap;
+      }
+
+      .kv-btn {
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .kv-btn-primary {
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+        color: black;
+        border: none;
+        font-size: 14px;
+        font-family: "Montserrat";
+        box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+      }
+
+      .kv-btn-secondary {
+        background: #e5e7eb;
+        color: #111827;
+        font-size: 14px;
+        font-family: "Montserrat";
+      }
+
+      .kv-btn-secondary:hover {
+        background: #d1d5db;
+      }
+
+      /* section 2 css */
+
+      .rwrg-card {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 40px 48px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+        text-align: justify;
+      }
+
+      .rwrg-label {
+        font-size: 13px;
+        font-weight: 700;
+        color: #3aa0e8;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .rwrg-title {
+        font-size: 40px;
+        margin: 10px 0 16px;
+        color: #1f2a44;
+        text-align: justify;
+      }
+
+      .rwrg-intro {
+        font-size: 15px;
+        color: #5f6c80;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      .rwrg-lists {
+        display: flex;
+        gap: 40px;
+        margin-bottom: 20px;
+      }
+
+      .rwrg-list {
+        width: 50%;
+      }
+
+      .rwrg-list li {
+        font-size: 15px;
+        color: #4c5a70;
+        margin-bottom: 10px;
+        text-align: justify;
+      }
+
+      .rwrg-cross {
+        color: #db210e;
+        font-weight: bold;
+        margin-right: 6px;
+      }
+
+      .rwrg-subheading {
+        font-size: 15px;
+        color: #1f2a44;
+        margin: 20px 0 10px;
+        text-align: justify;
+      }
+
+      .rwrg-requirements {
+        padding-left: 18px;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      .rwrg-requirements li {
+        font-size: 15px;
+        color: #4c5a70;
+        margin-bottom: 8px;
+      }
+
+      .rwrg-highlight {
+        font-size: 18px;
+        font-weight: 600;
+        color: #1d88e5;
+        margin: 20px 0;
+      }
+
+      .rwrg-description {
+        font-size: 18px;
+        color: #5f6c80;
+        line-height: 1.6;
+        margin-bottom: 12px;
+      }
+
+      @media (max-width: 600px) {
+        .rwrg-card {
+          padding: 30px 24px;
+        }
+
+        .rwrg-title {
+          font-size: 24px;
+        }
+
+        .rwrg-lists {
+          gap: 20px;
+        }
+
+        .rwrg-list {
+          width: 100%;
+        }
+      }
+
+      /* section 3 css */
+
+      .sim-edu-card {
+        background: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 44px;
+        padding: 40px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .sim-edu-title {
+        text-align: center;
+        color: #69aee3;
+        font-size: 38px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .sim-edu-subtitle {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 35px;
+      }
+
+      .sim-edu-subtitle span {
+        color: #1b5fa7;
+      }
+
+      .sim-edu-content {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+      }
+
+      .sim-edu-text {
+        flex: 1;
+        font-size: 14px;
+        color: #333;
+        text-align: justify;
+      }
+
+      .sim-edu-highlight {
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      .sim-edu-desc {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+
+      .sim-edu-list {
+        padding-left: 18px;
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+
+      .sim-edu-list li {
+        margin-bottom: 50px;
+      }
+
+      .sim-edu-retention {
+        font-size: 20px;
+        margin: 10px 0px;
+        place-self: end;
+        width: 400px;
+        text-align: justify;
+      }
+
+      .sim-edu-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      .sim-edu-image img {
+        max-width: 100%;
+        border-radius: 12px;
+      }
+
+      .sim-edu-bottom {
+        margin-top: 35px;
+        text-align: justify;
+      }
+
+      .sim-edu-boxes-heading {
+        font-weight: bold;
+        line-height: 25px;
+      }
+
+      .sim-edu-boxes {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+      }
+
+      .sim-edu-boxes ul {
+        background: #ceeafc;
+        padding: 15px 20px;
+        border-radius: 10px;
+        width: 48%;
+      }
+
+      .sim-edu-boxes li {
+        margin-bottom: 8px;
+        font-size: 14px;
+        margin-left: 20px;
+        padding-left: 10px;
+      }
+
+      .sim-edu-note {
+        font-weight: 700;
+        margin: 20px 0;
+        font-size: 18px;
+      }
+
+      .sim-edu-btn {
+        color: black;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .sim-edu-prefooter {
+        font-size: 14px;
+        color: #384653;
+        line-height: 40px;
+      }
+
+      .sim-edu-footer {
+        font-size: 14px;
+        color: black;
+        background: #ceeafc;
+        padding: 30px 15px;
+        border-radius: 15px;
+      }
+
+      /* section 4 css */
+      /* Card */
+      .sho-demo-card {
+        max-width: 900px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 24px;
+        display: flex;
+        overflow: hidden;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Left Content */
+      .sho-demo-content {
+        width: 55%;
+        padding: 50px 45px;
+        text-align: justify;
+      }
+
+      .sho-demo-label {
+        font-size: 20px;
+        letter-spacing: 1px;
+        color: #4aa3df;
+        font-weight: 600;
+      }
+
+      .sho-demo-title {
+        font-size: 36px;
+        line-height: 1.25;
+        margin: 15px 0;
+        color: #2e3c4e;
+      }
+
+      .sho-demo-title span {
+        font-weight: 800;
+      }
+
+      .sho-demo-description {
+        font-size: 17px;
+        color: #384653;
+        margin-bottom: 22px;
+        font-weight: 700;
+      }
+
+      /* List */
+      .sho-demo-list {
+        padding-left: 18px;
+        margin-bottom: 30px;
+      }
+
+      .sho-demo-list li {
+        font-size: 14px;
+        color: #384653;
+        margin-bottom: 10px;
+      }
+
+      /* Buttons */
+      .sho-demo-buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .sho-btn-primary {
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+        color: black;
+        padding: 12px 22px;
+        border-radius: 6px;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .sho-btn-secondary {
+        background: transparent;
+        border: 1px solid #1da1f2;
+        color: #1da1f2;
+        padding: 12px 22px;
+        border-radius: 6px;
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* Right Image */
+      .sho-demo-image {
+        width: 45%;
+        position: relative;
+        overflow: hidden;
+        /* ensures the image stays inside the rounded corner */
+      }
+
+      .sho-demo-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-left-radius: 350px;
+        /* left side rounded */
+        border-bottom-left-radius: 350px;
+        /* left side rounded */
+        border-top-right-radius: 0;
+        /* right side square */
+        border-bottom-right-radius: 0;
+        /* right side square */
+      }
+
+      /* Remove the inner curve effect */
+      .sho-demo-image::before {
+        display: none;
+        /* disables the inward white curve */
+      }
+
+      /* Responsive */
+      @media (max-width: 991px) {
+        .sho-demo-card {
+          flex-direction: column;
+        }
+
+        .sho-demo-content,
+        .sho-demo-image {
+          width: 100%;
+        }
+
+        .sho-demo-image::before {
+          display: none;
+        }
+
+        .sho-demo-title {
+          font-size: 28px;
+        }
+      }
+
+      /* section 5 css */
+      /* Main Card */
+      .kreditverse-wrapper {
+        background-color: #ffffff;
+        border-radius: 24px;
+        padding: 40px 30px;
+        max-width: 900px;
+        width: 100%;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Small Tag */
+      .kreditverse-section-tag {
+        /* display: inline-block; */
+        font-size: 18px;
+        font-weight: 600;
+        color: #75bae6;
+        /* margin-bottom: 12px; */
+      }
+
+      /* Heading */
+      .kreditverse-section-title {
+        font-size: 70px;
+        font-weight: 700;
+        color: #1f2933;
+        text-align: center;
+        line-height: 1.1;
+        margin-bottom: 30px;
+      }
+
+      /* Blue Highlight Text */
+      .kreditverse-highlight-text {
+        color: #1f8fff;
+      }
+
+      /* Image Wrapper */
+      .kreditverse-image-container {
+        width: 100%;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      /* Image */
+      .kreditverse-image-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .kreditverse-section-title {
+          font-size: 24px;
+        }
+
+        .kreditverse-wrapper {
+          padding: 25px 20px;
+        }
+      }
+
+      /* section css 6  */
+      .sho-financial-card {
+        background-color: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 30px;
+        text-align: justify;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .sho-financial-title {
+        font-size: 40px;
+        font-weight: 700;
+        color: #2e3c4e;
+        margin-bottom: 6px;
+      }
+
+      .sho-financial-subtitle {
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 16px;
+      }
+
+      .sho-financial-description {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      .sho-training-boxes {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-bottom: 18px;
+      }
+
+      .sho-training-list {
+        list-style: disc;
+        padding-left: 18px;
+        border: 1px solid #d8e7f4;
+        border-radius: 10px;
+        padding: 14px 18px;
+        width: 100%;
+        max-width: 250px;
+        background-color: #f9fcff;
+      }
+
+      .sho-training-list li {
+        font-size: 14px;
+        margin-bottom: 6px;
+        color: #333;
+      }
+
+      .sho-financial-note {
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #1f3b63;
+      }
+
+      .sho-financial-image-wrapper {
+        border-radius: 12px;
+        overflow: hidden;
+      }
+
+      .sho-financial-image {
+        width: 100%;
+        display: block;
+        border-radius: 12px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .sho-training-boxes {
+          flex-direction: column;
+        }
+
+        .sho-training-list {
+          max-width: 100%;
+        }
+      }
+
+      /* section 7 css */
+      .cte-card {
+        background: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 30px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Typography */
+      .cte-heading {
+        font-size: 36px;
+        font-weight: 700;
+        color: #1f3c88;
+        text-align: justify;
+        margin-bottom: 5px;
+      }
+
+      .cte-step {
+        color: #2a7be4;
+      }
+
+      .cte-subtitle {
+        font-size: 22px;
+        color: #2e3c4e;
+        text-align: left;
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+
+      .cte-description {
+        font-size: 18px;
+        color: #384653;
+        text-align: left;
+        margin-bottom: 20px;
+      }
+
+      /* Options Grid */
+      .cte-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+
+      .cte-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+        color: #384653;
+      }
+
+      .cte-icon {
+        width: 26px;
+        height: 26px;
+        fill: #2a7be4;
+        flex-shrink: 0;
+      }
+
+      /* Note */
+      .cte-note {
+        font-size: 18px;
+        color: #063e5f;
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      /* Image */
+      .cte-image-wrapper {
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .cte-main-image {
+        width: 100%;
+        display: block;
+        border-radius: 14px;
+      }
+
+      /* ========================= */
+      /* ===== RESPONSIVE ======== */
+      /* ========================= */
+
+      /* Tablet */
+      @media (max-width: 900px) {
+        .cte-card {
+          padding: 24px;
+        }
+
+        .cte-options {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .cte-heading {
+          font-size: 20px;
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 600px) {
+        .cte-section {
+          padding: 25px 12px;
+        }
+
+        .cte-card {
+          padding: 20px;
+          border-radius: 14px;
+        }
+
+        .cte-heading {
+          font-size: 18px;
+        }
+
+        .cte-description {
+          font-size: 14px;
+        }
+
+        .cte-options {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+
+        .cte-option {
+          font-size: 13px;
+        }
+
+        .cte-icon {
+          width: 22px;
+          height: 22px;
+        }
+
+        .cte-note {
+          font-size: 13px;
+        }
+      }
+
+      /* section 8 css */
+
+      .ghl-labs-container {
+        background-color: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        padding: 40px;
+        border-radius: 24px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .ghl-labs-title {
+        color: #1a4a7c;
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .ghl-labs-title span {
+        color: #3b82f6;
+      }
+
+      .ghl-labs-subtitle {
+        font-size: 18px;
+        color: #384653;
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+
+      /* Grid Layout */
+      .ghl-labs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+
+      .ghl-lab-card {
+        background-color: #e0effa;
+        border-radius: 8px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        transition: transform 0.2s ease;
+      }
+
+      .ghl-full-width {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      /* Icon Placeholders (Use your own SVGs or FontAwesome here) */
+      .ghl-icon-box {
+        width: 30px;
+        height: 30px;
+        background-color: #3b82f6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ghl-lab-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #384653;
+      }
+
+      /* Image Section */
+      .ghl-labs-image-wrapper {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+
+      .ghl-labs-hero-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .ghl-labs-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .ghl-labs-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ghl-labs-container {
+          padding: 20px;
+        }
+      }
+
+      /* section 9 css */
+      /* The White Card */
+      .sho-global-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 45px;
+        max-width: 900px;
+        width: 100%;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Typography */
+      .sho-global-title {
+        color: #2e3c4e;
+        text-align: center;
+        font-size: 36px;
+        font-weight: 800;
+        margin: 0 0 10px 0;
+      }
+
+      .sho-global-number {
+        color: #4a90e2;
+        /* Bright blue for the number */
+      }
+
+      .sho-global-subtitle {
+        font-weight: 700;
+        font-size: 22px;
+        text-align: left;
+        color: #2e3c4e;
+        margin: 0 0 20px 0;
+      }
+
+      .sho-global-intro {
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        color: #384653;
+        margin-bottom: 25px;
+      }
+
+      /* List Column Layout */
+      .sho-global-list-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px;
+        margin-bottom: 30px;
+      }
+
+      .sho-global-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 14px;
+        text-align: left;
+        width: 250px;
+      }
+
+      .sho-global-list li {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 8px;
+        padding-left: 15px;
+        position: relative;
+      }
+
+      .sho-global-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #333;
+      }
+
+      .sho-global-more {
+        font-weight: 800;
+        font-size: 13px;
+        color: #333;
+      }
+
+      /* Gallery Grid */
+      .sho-global-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        /* Matching the 5-column layout in image */
+        gap: 12px;
+      }
+
+      .sho-global-item img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        /* Keeps images square */
+        object-fit: cover;
+        border-radius: 15px;
+        display: block;
+      }
+
+      /* Last image positioning (the cockpit) */
+      .sho-global-item:nth-child(6) {
+        grid-column: 1;
+        /* Starts on the next row */
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .sho-global-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .sho-global-list-container {
+          gap: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .sho-global-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* section 10 css */
+      .fr-card {
+        background: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 30px 25px;
+        text-align: center;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .fr-step-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2e3c4e;
+        margin-bottom: 5px;
+      }
+
+      .fr-step-title span {
+        color: #2b8fdc;
+      }
+
+      .fr-free-text {
+        font-size: 23px;
+        font-weight: 600;
+        color: #2e3c4e;
+        margin-bottom: 12px;
+      }
+
+      .fr-question {
+        font-size: 30px;
+        font-weight: 600;
+        color: #75bae6;
+        margin-bottom: 6px;
+      }
+
+      .fr-subtext {
+        font-size: 22px;
+        font-weight: 600;
+        color: #2e3c4e;
+        margin-bottom: 8px;
+      }
+
+      .fr-note {
+        font-size: 22px;
+        color: #2e3c4e;
+        margin-bottom: 5px;
+      }
+
+      .fr-image {
+        background: #f3f4f6;
+        border-radius: 12px;
+        padding: 12px;
+      }
+
+      .fr-image img {
+        width: 100%;
+        border-radius: 10px;
+        display: block;
+      }
+
+      /* section 11 css */
+      .supp-card {
+        background: #ffffff;
+        border-radius: 24px;
+        max-width: 900px;
+        width: 100%;
+        padding: 25px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Feature Boxes */
+      .supp-features {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+      }
+
+      .supp-feature-box {
+        background: #cfebfc;
+        border-radius: 12px;
+        padding: 14px 16px;
+        flex: 1;
+        min-width: 220px;
+      }
+
+      .supp-feature-box h4 {
+        font-size: 15px;
+        text-align: left;
+        margin: 0 0 6px;
+        color: #384653;
+        font-weight: 600;
+      }
+
+      .supp-feature-box p {
+        font-size: 13px;
+        margin: 0;
+        text-align: left;
+        color: #4b5563;
+        line-height: 1.4;
+      }
+
+      /* Info Bar */
+      .supp-info-bar {
+        background: #cfebfc;
+        border-radius: 18px;
+        padding: 14px 16px 40px 16px;
+        font-size: 14px;
+        color: #384653;
+        margin-bottom: 20px;
+        text-align: left;
+        font-weight: 500;
+      }
+
+      /* Image */
+      .supp-image-box {
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .supp-image-box img {
+        width: 100%;
+        display: block;
+        border-radius: 14px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .supp-features {
+          flex-direction: column;
+        }
+
+        .supp-card {
+          padding: 18px;
+        }
+
+        .supp-info-bar {
+          font-size: 13px;
+        }
+      }
+
+      /* section 12 css */
+      /* ===== Card ===== */
+      .ai-interview-card {
+        max-width: 900px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* ===== Title ===== */
+      .ai-interview-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2e3c4e;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
+      .ai-step-number {
+        color: #1976d2;
+      }
+
+      .ai-interview-subtitle {
+        text-align: center;
+        font-size: 22px;
+        color: #2e3c4e;
+        margin-bottom: 28px;
+      }
+
+      /* ===== Features Grid ===== */
+      .ai-feature-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin-bottom: 28px;
+      }
+
+      /* ===== Feature Item ===== */
+      .ai-feature-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: #e3f2fd;
+        padding: 10px 22px 10px 12px;
+        border-radius: 30px;
+
+        font-size: 14px;
+        font-weight: 500;
+        color: #0d47a1;
+
+        overflow: visible;
+      }
+
+      /* smooth rounded extension (EXACT SHAPE) */
+      .ai-feature-item::after {
+        content: "";
+        position: absolute;
+        right: -24px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        width: 48px;
+        height: 48px;
+
+        background: #e3f2fd;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      /* ===== Icon ===== */
+      .ai-feature-icon {
+        width: 28px;
+        height: 28px;
+        background: #bbdefb;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 14px;
+        flex-shrink: 0;
+      }
+
+      /* ===== Text ===== */
+      .ai-feature-text {
+        white-space: nowrap;
+        line-height: 1;
+        font-size: 14px;
+        color: #2e3c4e;
+      }
+
+      /* ===== Image ===== */
+      .ai-image-wrapper {
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .ai-interview-image {
+        width: 100%;
+        display: block;
+        height: auto;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 600px) {
+        .ai-feature-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .ai-feature-item::after {
+          display: none;
+        }
+
+        .ai-interview-card {
+          padding: 20px;
+        }
+      }
+
+      /* section 13 css */
+      /* Card */
+      .aibb-dashboard-card {
+        max-width: 900px;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 24px;
+        padding: 28px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Title */
+      .aibb-dashboard-title {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        color: #1f2a44;
+        margin: 18px 0 26px;
+      }
+
+      /* Blue number */
+      .aibb-title-number {
+        color: #5aa9e6;
+      }
+
+      /* Track section */
+      .aibb-track-section {
+        margin-bottom: 24px;
+      }
+
+      .aibb-track-label {
+        display: block;
+        font-size: 14px;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #1f2a44;
+      }
+
+      /* Track grid */
+      .aibb-track-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      /* Track item */
+      .aibb-track-item {
+        position: relative;
+        border: 1px solid #c8ddf0;
+        border-radius: 12px;
+        padding: 26px 12px 14px;
+        text-align: left;
+        background: #ffffff;
+      }
+
+      .aibb-track-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+      }
+
+      /* Icon – top center INSIDE border */
+      .aibb-track-icon {
+        position: absolute;
+        top: -11px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 24px;
+        background: #6bb7e8;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Text below icon */
+      .aibb-track-text {
+        font-size: 14px;
+        color: #1f2a44;
+      }
+
+      /* Image */
+      .aibb-image-container {
+        margin-top: 22px;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .aibb-dashboard-image {
+        width: 100%;
+        display: block;
+        border-radius: 14px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .aibb-track-list {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .aibb-track-list {
+          grid-template-columns: 1fr;
+        }
+
+        .aibb-dashboard-title {
+          font-size: 18px;
+        }
+      }
+
+      /* section 14 css */
+      .abghl-card {
+        background: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Header */
+      .abghl-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .abghl-title {
+        font-size: 34px;
+        font-weight: 700;
+        color: #2e3c4e;
+      }
+
+      .abghl-subtitle {
+        font-size: 28px;
+        color: #2e3c4e;
+        font-weight: 700;
+      }
+
+      /* Hero */
+      .abghl-hero {
+        margin: 20px 0;
+      }
+
+      .abghl-hero-svg {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Description */
+      .abghl-description {
+        font-size: 15px;
+        color: #384653;
+        margin-bottom: 24px;
+        text-align: justify;
+      }
+
+      /* Features */
+      .abghl-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 30px;
+      }
+
+      .abghl-bottom {
+        padding-bottom: 15px;
+      }
+
+      .abghl-hero-img,
+      .abghl-bottom-img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        display: block;
+        object-fit: cover;
+      }
+
+      .abghl-feature {
+        gap: 12px;
+        text-align: justify;
+      }
+
+      .abghl-icon {
+        font-size: 22px;
+      }
+
+      .abghl-feature h4 {
+        font-size: 20px;
+        margin: 0 0 4px;
+        color: #384653;
+        font-weight: 700;
+      }
+
+      .abghl-feature p {
+        font-size: 14px;
+        color: #384653;
+        margin: 0;
+      }
+
+      /* Bottom Image */
+      .abghl-bottom-svg {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      /* Responsive */
+      @media (max-width: 640px) {
+        .abghl-title {
+          font-size: 20px;
+        }
+
+        .abghl-features {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* section 15 css */
+      .bh-container {
+        background: white;
+        border-radius: 24px;
+        padding: 60px 20px;
+        max-width: 900px;
+        width: 100%;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .bh-header {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
+      .bh-header h1 {
+        color: #75bae6;
+        font-size: 32px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      .bh-header h2 {
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      .bh-credentials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      .bh-credential-card {
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-left: 5px solid #60a5fa;
+        border-radius: 8px;
+        padding: 20px 25px;
+        display: flex;
+        align-items: flex-start;
+        transition: all 0.3s ease;
+        min-height: 70px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .bh-credential-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-left-color: #3b82f6;
+      }
+
+      .bh-credential-card::before {
+        content: "✓";
+        color: #2e3c4e;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-right: 15px;
+        flex-shrink: 0;
+        margin-top: -2px;
+      }
+
+      .bh-credential-card p {
+        color: #063e5f;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0px;
+        font-weight: 500;
+      }
+
+      .bh-description {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .bh-description p {
+        color: #384653;
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 15px;
+        text-align: left;
+        font-weight: 700;
+      }
+
+      .bh-description p:first-child {
+        font-weight: 700;
+        color: #063e5f;
+      }
+
+      .bh-images-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      .bh-image {
+        width: 90px;
+        height: 60px;
+        object-fit: contain; /* image distort nahi hogi */
+      }
+
+      /* Tablet Styles */
+      @media (max-width: 768px) {
+        .bh-container {
+          padding: 40px 30px;
+        }
+
+        .bh-header h1 {
+          font-size: 1.1rem;
+        }
+
+        .bh-header h2 {
+          font-size: 1.5rem;
+        }
+
+        .bh-credentials-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+        }
+
+        .bh-credential-card {
+          padding: 18px 22px;
+          min-height: 90px;
+        }
+
+        .bh-credential-card p {
+          font-size: 0.9rem;
+        }
+
+        .bh-description p {
+          font-size: 0.95rem;
+        }
+      }
+
+      /* Mobile Styles */
+      @media (max-width: 480px) {
+        body {
+          padding: 15px;
+        }
+
+        .bh-container {
+          padding: 30px 20px;
+          border-radius: 20px;
+        }
+
+        .bh-header {
+          margin-bottom: 30px;
+        }
+
+        .bh-header h1 {
+          font-size: 1rem;
+          letter-spacing: 1px;
+        }
+
+        .bh-header h2 {
+          font-size: 1.3rem;
+        }
+
+        .bh-credentials-grid {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        .bh-credential-card {
+          padding: 18px 20px;
+          min-height: auto;
+          border-left-width: 4px;
+        }
+
+        .bh-credential-card::before {
+          font-size: 1.1rem;
+          margin-right: 10px;
+        }
+
+        .bh-credential-card p {
+          font-size: 0.85rem;
+        }
+
+        .bh-description {
+          margin-top: 30px;
+        }
+
+        .bh-description p {
+          font-size: 0.9rem;
+          line-height: 1.6;
+        }
+
+        .bh-images-container {
+          gap: 10px;
+          margin-top: 20px;
+        }
+
+        .bh-image-placeholder {
+          width: 70px;
+          height: 50px;
+          font-size: 0.6rem;
+        }
+      }
+
+      /* Extra Small Mobile */
+      @media (max-width: 360px) {
+        .bh-container {
+          padding: 25px 15px;
+        }
+
+        .bh-header h1 {
+          font-size: 0.9rem;
+        }
+
+        .bh-header h2 {
+          font-size: 1.2rem;
+        }
+
+        .bh-credential-card p {
+          font-size: 0.8rem;
+        }
+
+        .bh-description p {
+          font-size: 0.85rem;
+        }
+      }
+
+      /* section 16 css */
+
+      /* Layout Container */
+      .asdf-main-wrapper {
+        font-family: "Montserrat", Barlow;
+        background-color: #ffffff;
+        border-radius: 24px;
+        padding: 50px 40px;
+        max-width: 900px;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Header Section */
+      .asdf-sub-headline {
+        color: #75bae6;
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .asdf-headline {
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      /* Responsive Grid */
+      .asdf-flex-row {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        text-align: left;
+        margin-bottom: 40px;
+      }
+
+      .asdf-col {
+        flex: 0 1 350px;
+      }
+
+      .asdf-col-title {
+        font-size: 23px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #2589c9;
+        /* Matches the 'Learners' and 'Outcomes' color */
+      }
+
+      /* List Styling */
+      .asdf-ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .asdf-li {
+        font-size: 14px;
+        color: #384653;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+        line-height: 1.1;
+      }
+
+      /* Left Side: Dot Bullet */
+      .asdf-li-dot::before {
+        content: "•";
+        color: #333c4e;
+        font-weight: bold;
+        margin-right: 12px;
+      }
+
+      /* Right Side: Dot + Checkmark */
+      .asdf-li-check::before {
+        content: "•";
+        color: #333c4e;
+        font-weight: bold;
+        margin-right: 12px;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+
+      /* Movement Text */
+      .asdf-movement-box {
+        max-width: 850px;
+        margin: 0 auto 40px auto;
+        font-size: 18px;
+        color: #333c4e;
+        line-height: 1.6;
+      }
+
+      .asdf-weight-700 {
+        font-weight: 700;
+      }
+
+      /* Image */
+      .asdf-hero-img-container {
+        width: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+
+      .asdf-hero-img-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 767px) {
+        .asdf-flex-row {
+          flex-direction: column;
+          gap: 30px;
+          padding-left: 20px;
+        }
+
+        .asdf-main-wrapper {
+          padding: 30px 15px;
+        }
+
+        .asdf-headline {
+          font-size: 24px;
+        }
+      }
+
+      /* section 17 css */
+      .abcdf-card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 900px;
+        text-align: left;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .abcdf-tagline {
+        color: #75bae6;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .abcdf-main-title {
+        color: #2e3c4e;
+        font-size: 32px;
+        text-align: left;
+        margin-top: 8px;
+        margin-bottom: 30px;
+        font-weight: 700;
+      }
+
+      .abcdf-feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .abcdf-list-item {
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 15px;
+        color: #334e68;
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Custom Checkmark Circle */
+      .abcdf-list-item::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        background-color: #d8eefe;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1a3a5a;
+        font-size: 10px;
+        font-weight: bold;
+        border: 1px solid #5857561f;
+      }
+
+      .abcdf-divider {
+        height: 3px;
+        background-color: #93969ba1;
+        margin: 40px 0 25px 0;
+      }
+
+      .abcdf-pricing-footer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .abcdf-total-value {
+        font-size: 22px;
+        font-weight: 700;
+        color: #1a3a5a;
+      }
+
+      .abcdf-price-section {
+        text-align: left;
+      }
+
+      .abcdf-current-price {
+        font-size: 42px;
+        font-weight: 700;
+        color: #2589c9;
+      }
+
+      .abcdf-monthly-installment {
+        font-size: 18px;
+        color: #384653;
+        margin-top: 5px;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        .abcdf-card {
+          padding: 25px;
+        }
+
+        .abcdf-main-title {
+          font-size: 22px;
+        }
+
+        .abcdf-pricing-footer {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+
+        .abcdf-price-section {
+          text-align: left;
+        }
+
+        .abcdf-total-value {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* section 18 css */
+      .bh1-container {
+        background: white;
+        border-radius: 24px;
+        padding: 60px 60px;
+        max-width: 900px;
+        width: 100%;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .bh1-header {
+        text-align: left;
+        margin-bottom: 8px;
+      }
+
+      .bh1-subtitle {
+        color: #75bae6;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 8px;
+      }
+
+      .bh1-pretitle {
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      .bh1-title {
+        color: #2e3c4e;
+        font-size: 42px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2;
+        margin-bottom: 35px;
+      }
+
+      .bh1-title-highlight {
+        color: #4a90e2;
+      }
+
+      .bh1-includes-title {
+        color: #2e3c4e;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .bh1-list {
+        list-style: none;
+        margin-bottom: 35px;
+        text-align: left;
+      }
+
+      .bh1-list-item {
+        color: #5a6c7d;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        padding-left: 24px;
+        position: relative;
+      }
+
+      .bh1-list-item::before {
+        content: ".";
+        position: absolute;
+        left: 0;
+        color: #4a90e2;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .bh1-form {
+        margin-bottom: 15px;
+        text-align: left;
+      }
+
+      .bh1-input-group {
+        background: #bedff3;
+        border-radius: 12px;
+        padding: 15px 30px;
+        margin-bottom: 18px;
+      }
+
+      .bh1-input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        color: #2c3e50;
+        font-size: 15px;
+        padding: 8px 0;
+        outline: none;
+        font-weight: 500;
+      }
+
+      .bh1-input::placeholder {
+        color: #5a6c7d;
+      }
+
+      .bh1-button {
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+        color: #384653;
+        border: none;
+        border-radius: 8px;
+        padding: 14px 32px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+      }
+
+      .bh1-footer {
+        text-align: left;
+        color: #384653;
+        font-size: 12px;
+        margin-top: 12px;
+      }
+
+      /* Media Queries for Responsive Design */
+      @media (max-width: 768px) {
+        .bh1-container {
+          padding: 40px 35px;
+          border-radius: 20px;
+        }
+
+        .bh1-subtitle {
+          font-size: 12px;
+        }
+
+        .bh1-pretitle {
+          font-size: 18px;
+        }
+
+        .bh1-title {
+          font-size: 32px;
+          margin-bottom: 28px;
+        }
+
+        .bh1-includes-title {
+          font-size: 15px;
+        }
+
+        .bh1-list-item {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+
+        .bh1-input-group {
+          padding: 24px 26px;
+        }
+
+        .bh1-input {
+          font-size: 14px;
+        }
+
+        .bh1-button {
+          padding: 13px 28px;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .bh1-body {
+          padding: 15px;
+        }
+
+        .bh1-container {
+          padding: 30px 25px;
+          border-radius: 16px;
+        }
+
+        .bh1-subtitle {
+          font-size: 11px;
+        }
+
+        .bh1-pretitle {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
+        .bh1-title {
+          font-size: 26px;
+          margin-bottom: 24px;
+        }
+
+        .bh1-includes-title {
+          font-size: 14px;
+          margin-bottom: 15px;
+        }
+
+        .bh1-list {
+          margin-bottom: 28px;
+        }
+
+        .bh1-list-item {
+          font-size: 13px;
+          margin-bottom: 9px;
+          padding-left: 20px;
+        }
+
+        .bh1-list-item::before {
+          font-size: 14px;
+        }
+
+        .bh1-input-group {
+          padding: 20px 22px;
+          margin-bottom: 15px;
+        }
+
+        .bh1-input {
+          font-size: 14px;
+          padding: 6px 0;
+        }
+
+        .bh1-input:not(:last-child) {
+          margin-bottom: 14px;
+          padding-bottom: 14px;
+        }
+
+        .bh1-button {
+          width: 100%;
+          padding: 12px 24px;
+          font-size: 14px;
+        }
+
+        .bh1-footer {
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .bh1-container {
+          padding: 25px 20px;
+        }
+
+        .bh1-title {
+          font-size: 23px;
+        }
+
+        .bh1-input-group {
+          padding: 18px 20px;
+        }
+      }
+
+      /* section 19 css */
+      .lkjh-container {
+        max-width: 900px;
+        background-color: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+        padding: 40px;
+        text-align: center;
+      }
+
+      /* Typography */
+      .lkjh-header-top {
+        color: #75bae6;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        font-size: 52px;
+      }
+
+      .lkjh-header-main {
+        color: #75bae6;
+        font-weight: 700;
+        font-size: 52px;
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+
+      .lkjh-subheadline {
+        font-size: 34px;
+        font-weight: 700;
+        color: #384653;
+        margin: 25px 0 10px 0;
+      }
+
+      .lkjh-intro-text {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #384653;
+        font-weight: 700;
+        margin: 0 auto 30px auto;
+      }
+
+      /* Expert Cards Section */
+      .lkjh-experts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+
+      .lkjh-expert-card {
+        border: 1px solid #d1e8f7;
+        border-radius: 12px;
+        padding: 20px;
+        background-color: #fcfdfe;
+      }
+
+      .lkjh-expert-title {
+        font-weight: 700;
+        font-size: 1rem;
+        color: #384653;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .lkjh-expert-desc {
+        font-size: 14px;
+        text-align: left;
+        line-height: 1.4;
+        color: #384653;
+      }
+
+      /* Features List */
+      .lkjh-features-box {
+        text-align: left;
+        margin-bottom: 25px;
+      }
+
+      .lkjh-features-box h4 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+
+      .lkjh-features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .lkjh-features-list li {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .lkjh-features-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #333;
+      }
+
+      /* Callout Text */
+      .lkjh-emphasis-text {
+        color: #384653;
+        font-weight: 700;
+        text-align: left;
+        font-size: 18px;
+        margin: 25px 0;
+      }
+
+      .lkjh-quote-bar {
+        border-left: 4px solid #5bb0e5;
+        padding: 10px 20px;
+        text-align: left;
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .lkjh-value-tag {
+        color: #1b6ca8;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+
+      /* Image Section */
+      .lkjh-image-wrapper {
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      .lkjh-image-wrapper img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        .lkjh-container {
+          padding: 20px;
+        }
+        .lkjh-header-main {
+          font-size: 1.6rem;
+        }
+        .lkjh-header-top {
+          font-size: 1.1rem;
+        }
+        .lkjh-subheadline {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+
+    <!-- section1 html -->
+
+    <div class="kv-wrapper">
+      <div class="kv-card">
+        <h2 class="kv-title">
+          KreditVerse Next Generation Ready™<br />
+          Career, Life Skills & Financial Literacy<br />
+          Simulation Learning System
+        </h2>
+
+        <div class="kv-image-box">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/fr1/e4b/i40/yO1ILA4xuft94UfGGZctp.png"
+            alt="KreditVerse Simulation Classroom"
+            class="kv-image"
+          />
+        </div>
+
+        <p class="kv-description">
+          Prepare for REAL LIFE with immersive, hands-on learning simulations.
+        </p>
+
+        <p class="kv-tags">
+          Money • Careers • Life Skills • STEM • AI Skills • Global Awareness
+        </p>
+
+        <p class="kv-highlight">
+          No VR gaming. Real-life training powered by simulation learning.
+        </p>
+
+        <p class="kv-mission">
+          Join the <strong>Next Generation Ready™ Movement</strong> — a mission
+          to prepare people of all ages for the world as it truly is today.
+        </p>
+
+        <p class="kv-offer">
+          Start for only <strong>$39/month</strong>. Only
+          <strong>100 Pilot Spots Available</strong>.
+        </p>
+
+        <div class="kv-buttons">
+          <a href="#" class="kv-btn kv-btn-primary">Watch How It Works</a>
+          <a href="#" class="kv-btn kv-btn-secondary">Enroll Now</a>
+        </div>
+      </div>
+
+      <!-- section2 html -->
+      <div class="rwrg-card">
+        <span class="rwrg-label">THE OPENING</span>
+        <h2 class="rwrg-title">The Real-World Readiness Gap</h2>
+
+        <p class="rwrg-intro">
+          The world is evolving faster than traditional education. Most people
+          reach adulthood without mastery of:
+        </p>
+
+        <div class="rwrg-lists">
+          <ul class="rwrg-list">
+            <li><span class="rwrg-cross">✖</span> Money</li>
+            <li><span class="rwrg-cross">✖</span> Credit</li>
+            <li><span class="rwrg-cross">✖</span> Taxes</li>
+            <li><span class="rwrg-cross">✖</span> Decision-making</li>
+          </ul>
+
+          <ul class="rwrg-list">
+            <li><span class="rwrg-cross">✖</span> Real-world communication</li>
+            <li><span class="rwrg-cross">✖</span> Career exploration</li>
+            <li><span class="rwrg-cross">✖</span> AI fluency</li>
+            <li>
+              <span class="rwrg-cross">✖</span> Problem-solving under pressure
+            </li>
+          </ul>
+        </div>
+
+        <p class="rwrg-subheading">
+          And yet, the demands of modern adulthood require
+          <strong>MORE:</strong>
+        </p>
+
+        <ul class="rwrg-requirements">
+          <li>Higher cost of living</li>
+          <li>Complex financial systems</li>
+          <li>New industries and job paths</li>
+          <li>Automation and AI in every field</li>
+          <li>Increased global competition</li>
+          <li>New expectations for adaptability and confidence</li>
+        </ul>
+
+        <p class="rwrg-highlight">
+          School teaches information. Real life demands skill.
+        </p>
+
+        <p class="rwrg-description">
+          KreditVerse exists to close that gap through simulation-based
+          learning, the method proven to build mastery through experience, not
+          memorization.
+        </p>
+
+        <p class="rwrg-description">
+          And it's more than a system — it is the Next Generation Ready™
+          Movement: A growing community of families, learners, educators, new
+          Americans, and working adults choosing real-world preparation over
+          outdated instruction.
+        </p>
+      </div>
+
+      <!-- section3 html -->
+
+      <div class="sim-edu-card">
+        <h2 class="sim-edu-title">
+          WHY SIMULATIONS ARE NEXT WAVE IN<br />
+          EFFECTIVE EDUCATION
+        </h2>
+
+        <p class="sim-edu-subtitle">
+          We Learn <span>BEST by Doing </span>– Not by Listening
+        </p>
+
+        <div class="sim-edu-content">
+          <div class="sim-edu-text">
+            <p class="sim-edu-highlight">
+              Lecture-based learning = LOW retention<br />
+              Simulation learning = HIGH mastery
+            </p>
+
+            <p class="sim-edu-desc">
+              In a major study conducted by PwC, VR-based learners:
+            </p>
+
+            <ul class="sim-edu-list">
+              <li>learned up to 4x faster than classroom learners</li>
+              <li>were 275% more confident applying what they learned</li>
+              <li>were 3.75x more emotionally connected to the content</li>
+              <li>
+                showed dramatically increased focus and reduced distraction
+              </li>
+            </ul>
+          </div>
+
+          <div class="sim-edu-image">
+            <img
+              src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/spx/dm3/fxu/section3.png"
+              alt="Simulation Learning"
+            />
+          </div>
+        </div>
+
+        <p class="sim-edu-retention">
+          Traditional Learning:<br />
+          Lecture – 5–10%<br />
+          Reading – 10–20%<br />
+          Workshops – 20%<br /><br />
+          <strong>Simulation-Based Learning – 75–90%</strong>
+        </p>
+
+        <div class="sim-edu-bottom">
+          <p>
+            This is how pilots, doctors, engineers & the military train. Now
+            your team can too.
+          </p>
+
+          <div class="sim-edu-boxes">
+            <ul>
+              <div class="sim-edu-boxes-heading">Why simulations win:</div>
+              <li>✔ Safe real-world practice</li>
+              <li>✔ Faster skill development</li>
+              <li>✔ Builds confidence</li>
+            </ul>
+            <ul>
+              <li>✔ No distractions</li>
+              <li>✔ Deep retention</li>
+              <li>✔ Realistic environments</li>
+              <li>✔ Applied learning</li>
+            </ul>
+          </div>
+
+          <p class="sim-edu-note">
+            This is NOT VR gaming. This is future-of-work education.
+          </p>
+
+          <span href="#" class="sim-edu-btn">
+            CTA: 👉 Enroll in the Pilot – Only 100 Spots
+          </span>
+
+          <p class="sim-edu-prefooter">
+            (Backed by Parent Confidence & Progress Guarantee — No Returns
+            Required)
+          </p>
+
+          <p class="sim-edu-footer">
+            📧<b>Simulation is the gold standard of real training.</b> Used by
+            pilots, surgeons, military engineers, trades professionals. Now
+            available for everyone, at home.
+          </p>
+        </div>
+      </div>
+
+      <!-- section4 html -->
+      <div class="sho-demo-card">
+        <!-- LEFT CONTENT -->
+        <div class="sho-demo-content">
+          <span class="sho-demo-label">VSL / DEMO VIDEO SECTION</span>
+          <h2 class="sho-demo-title">
+            See Inside the<br />
+            <span>KreditVerse Learning System</span>
+          </h2>
+
+          <p class="sho-demo-description">
+            Watch how immersive simulations develop real-world mastery in under
+            3 minutes.
+          </p>
+
+          <ul class="sho-demo-list">
+            <li>Why simulation learning outperforms traditional instruction</li>
+            <li>
+              How our 12 Department of Education-aligned financial literacy
+              courses work
+            </li>
+            <li>
+              How CTE career pathways guide learners before committing to a
+              field
+            </li>
+            <li>How STEM labs deepen comprehension</li>
+            <li>
+              How the FutureReady AI Coach builds communication & confidence
+            </li>
+            <li>
+              Why KreditVerse is trusted as an Official Meta Education Solutions
+              Partner
+            </li>
+            <li>Why we are an Approved Department of Education Vendor</li>
+            <li>What's included in the full Next Generation Ready™ Bundle</li>
+            <li>How the Parent Confidence Guarantee protects every family</li>
+          </ul>
+
+          <div class="sho-demo-buttons">
+            <a href="#" class="sho-btn-primary">Start for $89/month</a>
+            <a href="#" class="sho-btn-secondary">Watch Full Demo</a>
+          </div>
+        </div>
+
+        <!-- RIGHT IMAGE -->
+        <div class="sho-demo-image">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/5z9/bxr/wo1/Gemini_Generated_Image_10el5u10el5u10el.png"
+            alt="VR Learning"
+          />
+        </div>
+      </div>
+
+      <!-- section5 html -->
+      <div class="kreditverse-wrapper">
+        <span class="kreditverse-section-tag">THE FULL SYSTEM</span>
+
+        <h2 class="kreditverse-section-title">
+          The KreditVerse
+          <span class="kreditverse-highlight-text">Next Generation Ready™</span>
+          System includes:
+        </h2>
+
+        <div class="kreditverse-image-container">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/767/2dd/a8c/section5.png"
+            alt="KreditVerse Dashboard"
+          />
+        </div>
+      </div>
+
+      <!-- section 6 html -->
+      <div class="sho-financial-card">
+        <h2 class="sho-financial-title">1. Financial Literacy Simulations</h2>
+
+        <p class="sho-financial-subtitle">
+          <strong
+            >(12 modules aligned to Department of Education standards)</strong
+          >
+        </p>
+
+        <p class="sho-financial-description">Experience-based training in:</p>
+
+        <div class="sho-training-boxes">
+          <ul class="sho-training-list">
+            <li>Identity Theft</li>
+            <li>Banking & Savings</li>
+            <li>Budgeting</li>
+            <li>Credit & Borrowing</li>
+          </ul>
+
+          <ul class="sho-training-list">
+            <li>Loans & Interest</li>
+            <li>Taxes</li>
+            <li>Money Management</li>
+            <li>Insurance</li>
+          </ul>
+
+          <ul class="sho-training-list">
+            <li>Auto & Home Decisions</li>
+            <li>Investing</li>
+            <li>Crypto & NFTs</li>
+            <li>Career and First Paycheck</li>
+          </ul>
+        </div>
+
+        <p class="sho-financial-note">
+          Each lesson requires learners to make real decisions, creating deeper
+          understanding and retention.
+        </p>
+
+        <div class="sho-financial-image-wrapper">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/yit/yn3/fye/Gemini_Generated_Image_wupucmwupucmwupu.png"
+            alt="Financial Simulation"
+            class="sho-financial-image"
+          />
+        </div>
+      </div>
+
+      <!-- section 7 -->
+      <div class="cte-card">
+        <h2 class="cte-heading">
+          <span class="cte-step">2.</span> CTE Career Pathway Simulations
+        </h2>
+        <p class="cte-subtitle">(Choose One)</p>
+
+        <p class="cte-description">
+          Hands-on exploration of high-demand, high-income fields:
+        </p>
+
+        <div class="cte-options">
+          <div class="cte-option">
+            <svg class="cte-icon" viewBox="0 0 24 24">
+              <path d="M12 2C8 7 6 10 6 13a6 6 0 0012 0c0-3-2-6-6-11z" />
+            </svg>
+            <span>HVAC</span>
+          </div>
+
+          <div class="cte-option">
+            <svg class="cte-icon" viewBox="0 0 24 24">
+              <path d="M2 21l7-7 2 2-7 7H2zm12.5-12.5l-2-2L17 2l2 2-4.5 4.5z" />
+            </svg>
+            <span>Carpentry</span>
+          </div>
+
+          <div class="cte-option">
+            <svg class="cte-icon" viewBox="0 0 24 24">
+              <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" />
+            </svg>
+            <span>Welding</span>
+          </div>
+
+          <div class="cte-option">
+            <svg class="cte-icon" viewBox="0 0 24 24">
+              <path
+                d="M12 8l4-4 4 4-4 4-4-4zm-4 4l4 4-4 4-4-4 4-4zm8 0l4 4-4 4-4-4 4-4z"
+              />
+            </svg>
+            <span>Drone Operation</span>
+          </div>
+
+          <div class="cte-option">
+            <svg class="cte-icon" viewBox="0 0 24 24">
+              <path d="M12 2l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5l2-5z" />
+            </svg>
+            <span>Nursing Assistant</span>
+          </div>
+        </div>
+
+        <p class="cte-note">
+          Learners test-drive careers before investing years or money.
+        </p>
+
+        <div class="cte-image-wrapper">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/oer/s9r/l0l/section7.png"
+            alt="Career Simulation"
+            class="cte-main-image"
+          />
+        </div>
+      </div>
+
+      <!-- section 8 html -->
+      <div class="ghl-labs-container">
+        <h2 class="ghl-labs-title">
+          <span>3.</span> STEM & STEAM Immersive Labs
+        </h2>
+        <p class="ghl-labs-subtitle">Simulations that bring science to life:</p>
+
+        <div class="ghl-labs-grid">
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box chemistry-icon"></div>
+            <span class="ghl-lab-name">Chemistry</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box biology-icon"></div>
+            <span class="ghl-lab-name">Biology</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box anatomy-icon"></div>
+            <span class="ghl-lab-name">Anatomy</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box engineering-icon"></div>
+            <span class="ghl-lab-name">Engineering</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box earth-icon"></div>
+            <span class="ghl-lab-name">Earth Science</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box astronomy-icon"></div>
+            <span class="ghl-lab-name">Astronomy</span>
+          </div>
+        </div>
+
+        <div class="ghl-lab-card ghl-full-width">
+          <div class="ghl-icon-box space-icon"></div>
+          <span class="ghl-lab-name">Space Exploration</span>
+        </div>
+
+        <div class="ghl-labs-image-wrapper">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/kgr/z4o/86g/Gemini_Generated_Image_3t26vi3t26vi3t26.png"
+            alt="Student using VR in Science Lab"
+            class="ghl-labs-hero-img"
+          />
+        </div>
+      </div>
+
+      <!-- section 9 html -->
+      <div class="sho-global-card">
+        <h2 class="sho-global-title">
+          <span class="sho-global-number">4.</span> Global Exploration
+        </h2>
+        <p class="sho-global-subtitle">(150+ experiences)</p>
+        <p class="sho-global-intro">
+          Travel through immersive simulations, building global awareness:
+        </p>
+
+        <div class="sho-global-list-container">
+          <ul class="sho-global-list">
+            <li>Egypt</li>
+            <li>NASA</li>
+            <li>Rome</li>
+            <li>Eiffel Tower</li>
+          </ul>
+          <ul class="sho-global-list">
+            <li>National Parks</li>
+            <li>African Wildlife</li>
+            <li>Space Missions</li>
+          </ul>
+          <div class="sho-global-more">and more...</div>
+        </div>
+
+        <div class="sho-global-grid">
+          <div class="sho-global-item">
+            <img
+              src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/xq1/4ns/ftz/section9-4.png"
+              alt="Egypt"
+            />
+          </div>
+          <div class="sho-global-item">
+            <img
+              src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/24q/b27/4nf/section9-3.png"
+              alt="Rome"
+            />
+          </div>
+          <div class="sho-global-item">
+            <img
+              src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/2u5/y7v/5ir/section9-1.png"
+              alt="Eiffel Tower"
+            />
+          </div>
+          <div class="sho-global-item">
+            <img
+              src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/1ma/vo7/xtc/section9-2.png"
+              alt="NASA"
+            />
+          </div>
+          <div class="sho-global-item">
+            <img
+              src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/67q/t5x/1l5/section9-6.png"
+              alt="Wildlife"
+            />
+          </div>
+          <div class="sho-global-item">
+            <img
+              src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/zvt/5vv/aun/jmnOnbCoAS6hbEdxO9EwP.png"
+              alt="Space"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- section 10 html -->
+
+      <div class="fr-card">
+        <h3 class="fr-step-title"><span>5.</span> FutureReady AI Coach</h3>
+
+        <p class="fr-free-text">(FREE FOR THE FIRST 60 Days)</p>
+
+        <p class="fr-question">Are you currently paying for or need a tutor?</p>
+
+        <p class="fr-subtext">Everyone needs a Coach</p>
+
+        <p class="fr-note">
+          No credit card, No hardware needed this is browser-based access
+        </p>
+
+        <div class="fr-image">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/qzd/s76/k7d/section10.png"
+            alt="AI Tutor"
+          />
+        </div>
+      </div>
+
+      <!-- section 11 html -->
+      <div class="supp-card">
+        <!-- Top Feature Boxes -->
+        <div class="supp-features">
+          <div class="supp-feature-box">
+            <h4>30+ Language Support</h4>
+            <p>accessible for multilingual and ESL learners</p>
+          </div>
+
+          <div class="supp-feature-box">
+            <h4>24/7 AI Personal Tutor</h4>
+            <p>web based, no headset needed, anytime, anywhere</p>
+          </div>
+
+          <div class="supp-feature-box">
+            <h4>Works for Everyone</h4>
+            <p>students, parents, educators, and working adults</p>
+          </div>
+        </div>
+
+        <!-- Info Bar -->
+        <div class="supp-info-bar">
+          Upload PDFs and Text Book Materials – Get real-time explanations and
+          translations
+        </div>
+
+        <!-- Image Section -->
+        <div class="supp-image-box">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/jdi/25y/ucl/section11.png"
+            alt="Team Learning"
+          />
+        </div>
+      </div>
+
+      <!-- section 12 html -->
+      <div class="ai-interview-card">
+        <h2 class="ai-interview-title">
+          <span class="ai-step-number">6. Powerful </span>AI Interview
+          Simulations
+        </h2>
+
+        <p class="ai-interview-subtitle">Practice:</p>
+
+        <div class="ai-feature-grid">
+          <div class="ai-feature-item">
+            <span class="ai-feature-icon">💬</span>
+            <span class="ai-feature-text">Interview Skills</span>
+          </div>
+
+          <div class="ai-feature-item">
+            <span class="ai-feature-icon">💼</span>
+            <span class="ai-feature-text"
+              >Professional Interview Scenarios</span
+            >
+          </div>
+
+          <div class="ai-feature-item">
+            <span class="ai-feature-icon">🧘</span>
+            <span class="ai-feature-text">Reducing Anxiety</span>
+          </div>
+
+          <div class="ai-feature-item">
+            <span class="ai-feature-icon">✔</span>
+            <span class="ai-feature-text">Job Readiness</span>
+          </div>
+        </div>
+
+        <div class="ai-image-wrapper">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/opg/zv0/j00/section12.png"
+            alt="AI Interview Simulation"
+            class="ai-interview-image"
+          />
+        </div>
+      </div>
+
+      <!-- section 13 html -->
+      <div class="aibb-dashboard-card">
+        <h2 class="aibb-dashboard-title">
+          <span class="aibb-title-number">7.</span>
+          Parent / Adult / Learner Dashboard
+        </h2>
+
+        <div class="aibb-track-section">
+          <span class="aibb-track-label">Track:</span>
+
+          <div class="aibb-track-list">
+            <div class="aibb-track-item">
+              <span class="aibb-track-icon">✓</span>
+              <span class="aibb-track-text">decision patterns</span>
+            </div>
+
+            <div class="aibb-track-item">
+              <span class="aibb-track-icon">S</span>
+              <span class="aibb-track-text">financial choices</span>
+            </div>
+
+            <div class="aibb-track-item">
+              <span class="aibb-track-icon">↑</span>
+              <span class="aibb-track-text">progress</span>
+            </div>
+
+            <div class="aibb-track-item">
+              <span class="aibb-track-icon">✦</span>
+              <span class="aibb-track-text">mastery</span>
+            </div>
+
+            <div class="aibb-track-item">
+              <span class="aibb-track-icon">+</span>
+              <span class="aibb-track-text">engagement</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="aibb-image-container">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/pkv/j91/6ku/section13.png"
+            alt="Dashboard Preview"
+            class="aibb-dashboard-image"
+          />
+        </div>
+      </div>
+
+      <!-- section 14 html -->
+      <!-- Card -->
+      <div class="abghl-card">
+        <!-- Header -->
+        <div class="abghl-header">
+          <h1 class="abghl-title">Welcome to KreditVersity EDU Streaming.</h1>
+          <p class="abghl-subtitle">
+            Thousands of Hours of Learning – Free with every headset
+          </p>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="abghl-hero">
+          <img
+            class="abghl-hero-img"
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/fn3/2zz/5ee/section14-1.png"
+            alt="VR Learning Experience"
+          />
+        </div>
+
+        <!-- Description -->
+        <p class="abghl-description">
+          Unlock a complete library of
+          <b> premium educational content </b>included free with every
+          KreditVerse headset. From STEM to financial education, mindset,
+          wellness, global history, and entrepreneurship — you get
+          <b> unlimited access </b> to the hottest topics shaping today’s world.
+          KreditVerse EDU transforms your headset into a 24/7
+          <b> daily learning hub,</b> empowering parents, students, new
+          professionals, and lifelong learners alike.
+        </p>
+
+        <!-- Features -->
+        <div class="abghl-features">
+          <div class="abghl-feature">
+            <span class="abghl-icon">📘</span>
+            <div>
+              <h4>Financial Literacy</h4>
+              <p>Money, savings and real-world finance skills.</p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">🧪</span>
+            <div>
+              <h4>STEM & Future Careers</h4>
+              <p>Science, technology and innovation learning.</p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">💼</span>
+            <div>
+              <h4>Soft Skills Growth</h4>
+              <p>Communication, leadership and confidence.</p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">🧠</span>
+            <div>
+              <h4>Wellness & Mindset</h4>
+              <p>Mental clarity, focus and self-improvement.</p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">📖</span>
+            <div>
+              <h4>Language Learning</h4>
+              <p>Global opportunities powered by immersive repetition.</p>
+              <p>
+                All delivered in a format
+                <b> 10x more engaging than traditional learning</b>
+              </p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">👨&zwj;🎓</span>
+            <div>
+              <h4>Life Skills</h4>
+              <p>
+                Job prep, resume building, decision-making, conflict resolution
+              </p>
+              <p>right inside the headset you’re already using.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Image -->
+        <div class="abghl-bottom">
+          <img
+            class="abghl-bottom-img"
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/4k7/nzl/xx9/section14-2.png"
+            alt="VR Living Room Experience"
+          />
+        </div>
+        <p>
+          Your education doesn’t end when the simulation does — KreditVerse EDU
+          gives you endless ways to grow every day.
+        </p>
+      </div>
+
+      <!-- section 15 html -->
+      <div class="bh-container">
+        <div class="bh-header">
+          <h1>Authority & Credibility</h1>
+          <h2>KreditVerse is recognized and trusted:</h2>
+        </div>
+
+        <div class="bh-credentials-grid">
+          <div class="bh-credential-card">
+            <p>Official Meta Education Solutions Partner</p>
+          </div>
+          <div class="bh-credential-card">
+            <p>Approved Department of Education Vendor</p>
+          </div>
+          <div class="bh-credential-card">
+            <p>Department of Education-Aligned Curriculum</p>
+          </div>
+          <div class="bh-credential-card">
+            <p>VictoryXR STEM/STEAM Collaborator</p>
+          </div>
+          <div class="bh-credential-card">
+            <p>FERPA & COPPA Compliant</p>
+          </div>
+          <div class="bh-credential-card">
+            <p>Used in NYC & NJ Public School Pilots</p>
+          </div>
+          <div class="bh-credential-card">
+            <p>Built with proven simulation learning frameworks</p>
+          </div>
+        </div>
+
+        <div class="bh-description">
+          <p>
+            This is a best-in-class educational system accessible from home.
+          </p>
+          <p>
+            And it powers the Next Generation Ready™ Movement — a national
+            initiative to prepare people for real-world financial, career, and
+            life success.
+          </p>
+        </div>
+
+        <div class="bh-images-container">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/gqb/7ye/jn4/section15-1.png"
+            alt="Image 1"
+            class="bh-image"
+          />
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/55n/f28/nh2/section15-2.png"
+            alt="Image 2"
+            class="bh-image"
+          />
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/4mj/0zp/xex/section15-3.png"
+            alt="Image 3"
+            class="bh-image"
+          />
+        </div>
+      </div>
+
+      <!-- section 16 html -->
+      <div class="asdf-main-wrapper">
+        <div class="asdf-sub-headline">
+          Real Time Transformations — Who it's for & What it Solves
+        </div>
+        <h1 class="asdf-headline">KreditVerse Serves Many Audiences</h1>
+
+        <div class="asdf-flex-row">
+          <div class="asdf-col">
+            <h3 class="asdf-col-title">Learners:</h3>
+            <ul class="asdf-ul">
+              <li class="asdf-li asdf-li-dot">Teens entering adulthood</li>
+              <li class="asdf-li asdf-li-dot">College students</li>
+              <li class="asdf-li asdf-li-dot">Young adults</li>
+              <li class="asdf-li asdf-li-dot">New Americans</li>
+              <li class="asdf-li asdf-li-dot">Struggling workers</li>
+              <li class="asdf-li asdf-li-dot">Career changers</li>
+              <li class="asdf-li asdf-li-dot">Job seekers</li>
+              <li class="asdf-li asdf-li-dot">
+                Adults needing financial mastery
+              </li>
+            </ul>
+          </div>
+
+          <div class="asdf-col">
+            <h3 class="asdf-col-title">Outcomes:</h3>
+            <ul class="asdf-ul">
+              <li class="asdf-li asdf-li-check">✓ financial competence</li>
+              <li class="asdf-li asdf-li-check">✓ career clarity</li>
+              <li class="asdf-li asdf-li-check">✓ adulting skills</li>
+              <li class="asdf-li asdf-li-check">✓ STEM understanding</li>
+              <li class="asdf-li asdf-li-check">✓ communication improvement</li>
+              <li class="asdf-li asdf-li-check">✓ personal confidence</li>
+              <li class="asdf-li asdf-li-check">✓ global awareness</li>
+              <li class="asdf-li asdf-li-check">✓ future readiness</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="asdf-movement-box">
+          <span class="asdf-weight-700"
+            >Everyone who joins becomes part of the Next Generation Ready™
+            Movement — people committed to building capability, confidence, and
+            opportunity for today's world.</span
+          >
+        </div>
+
+        <div class="asdf-hero-img-container">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/0cc/nz4/jzp/section15.png"
+            alt="Successful group of people"
+          />
+        </div>
+      </div>
+
+      <!-- section 17 html -->
+      <div class="abcdf-card">
+        <header class="abcdf-card-header">
+          <span class="abcdf-tagline">VALUE STACK</span>
+          <h1 class="abcdf-main-title">
+            Your Founding Family Bundle includes:
+          </h1>
+        </header>
+
+        <ul class="abcdf-feature-list">
+          <li class="abcdf-list-item">✓ Meta Quest Headset</li>
+          <li class="abcdf-list-item">
+            ✓ 12 DOE-aligned financial simulations
+          </li>
+          <li class="abcdf-list-item">✓ One CTE Career Pathway</li>
+          <li class="abcdf-list-item">✓ STEM Labs</li>
+          <li class="abcdf-list-item">✓ 150+ global experiences</li>
+          <li class="abcdf-list-item">✓ FutureReady AI Coach</li>
+          <li class="abcdf-list-item">✓ AI Interview Simulator</li>
+          <li class="abcdf-list-item">✓ Parent/Adult/Learner Dashboard</li>
+          <li class="abcdf-list-item">✓ 12 Months of Monthly Masterclasses</li>
+          <li class="abcdf-list-item">✓ Founders Badge</li>
+          <li class="abcdf-list-item">✓ Next Generation Ready™ Swag Pack</li>
+          <li class="abcdf-list-item">
+            Automatic Enrollment into our KreditVerse 12 Month Master Class
+            Program
+          </li>
+          <li class="abcdf-list-item">
+            Unlimited Access to KREDITVERSITY - Thousands of Hours Educational
+            Streaming Content
+          </li>
+        </ul>
+
+        <div class="abcdf-divider"></div>
+
+        <footer class="abcdf-pricing-footer">
+          <div class="abcdf-total-value">Total Value: $4,500+</div>
+          <div class="abcdf-price-section">
+            <div class="abcdf-current-price">Today: $1,999</div>
+            <div class="abcdf-monthly-installment">or $83/month</div>
+          </div>
+        </footer>
+      </div>
+
+      <!-- section 18 html -->
+
+      <div class="bh1-container">
+        <div class="bh1-header">
+          <div class="bh1-subtitle">EMAIL CAPTURE INLINE (Lead Magnet)</div>
+          <h2 class="bh1-pretitle">Not ready to enroll yet?</h2>
+          <h1 class="bh1-title">
+            Get the <span class="bh1-title-highlight">FREE</span> Future-Ready
+            Life Skills Guide.
+          </h1>
+        </div>
+
+        <div class="bh1-content">
+          <p class="bh1-includes-title">Includes:</p>
+          <ul class="bh1-list">
+            <li class="bh1-list-item">
+              ✓ 7 essential life skills schools don't teach
+            </li>
+            <li class="bh1-list-item">✓ Simulation preview</li>
+            <li class="bh1-list-item">✓ Money mastery roadmap</li>
+            <li class="bh1-list-item">✓ Career exploration worksheet</li>
+            <li class="bh1-list-item">✓ Masterclass invitation</li>
+            <li class="bh1-list-item">✓ 3-module simulation sneak peek</li>
+          </ul>
+        </div>
+
+        <form class="bh1-form" id="bh1-lead-form">
+          <div class="bh1-input-group">
+            <input
+              type="text"
+              class="bh1-input"
+              placeholder="[ Name ]"
+              id="bh1-name"
+              required
+            />
+            <input
+              type="email"
+              class="bh1-input"
+              placeholder="[ Email ]"
+              id="bh1-email"
+              required
+            />
+          </div>
+          <button type="submit" class="bh1-button">Get the Free Guide</button>
+        </form>
+
+        <div class="bh1-footer">We respect your inbox.</div>
+      </div>
+
+      <!-- section 19 html -->
+      <div class="lkjh-container">
+        <header>
+          <div class="lkjh-header-top">NEXT GENERATION READY™</div>
+          <h1 class="lkjh-header-main">MASTERCLASS SERIES</h1>
+          <h2 class="lkjh-subheadline">
+            12 Months of Expert-Led Deep Training — Included Free
+          </h2>
+          <p class="lkjh-intro-text">
+            Every month, your family joins a live Masterclass that breaks down
+            one chapter of the KreditVerse 12-Course Financial Literacy
+            Curriculum.
+          </p>
+        </header>
+
+        <section>
+          <p
+            style="
+              text-align: left;
+              font-size: 16px;
+              margin-bottom: 10px;
+              color: #384653;
+            "
+          >
+            These sessions are led by:
+          </p>
+          <div class="lkjh-experts-grid">
+            <div class="lkjh-expert-card">
+              <span class="lkjh-expert-title">Financial literacy experts</span>
+              <span class="lkjh-expert-desc"
+                >who teach credit, budgeting, banking, taxes, loans, investing,
+                insurance, and money management</span
+              >
+            </div>
+            <div class="lkjh-expert-card">
+              <span class="lkjh-expert-title">AI specialists</span>
+              <span class="lkjh-expert-desc"
+                >who explain how emerging technology impacts jobs, careers, and
+                earning potential</span
+              >
+            </div>
+            <div class="lkjh-expert-card">
+              <span class="lkjh-expert-title"
+                >CTE and skilled-trade professionals</span
+              >
+              <span class="lkjh-expert-desc"
+                >who give real-world insight into HVAC, electrical, plumbing,
+                welding, carpentry, healthcare, drone operations, and other
+                high-demand pathways</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="lkjh-features-box">
+          <h4>Each Masterclass includes:</h4>
+          <ul class="lkjh-features-list">
+            <li>A guided walkthrough of that month's module</li>
+            <li>Tools, worksheets, and action steps</li>
+            <li>Q&A for families and learners</li>
+          </ul>
+        </section>
+
+        <section>
+          <p class="lkjh-emphasis-text">
+            This is not more content — it is clarity, context, and confidence
+            delivered every month.
+          </p>
+
+          <div class="lkjh-quote-bar">
+            Simulations teach the experience. Masterclasses teach the
+            understanding. Together, they build true financial and career
+            readiness.
+          </div>
+
+          <p class="lkjh-value-tag">
+            $1,200 annual value — included FREE for Founding Families.
+          </p>
+        </section>
+
+        <div class="lkjh-image-wrapper">
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/7vv/tk7/m4w/section19.png"
+            alt="Family watching educational masterclass"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

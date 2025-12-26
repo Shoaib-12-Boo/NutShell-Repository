@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .supp-wrapper {
+        background: linear-gradient(180deg, #a8d6f3 0%, #cfe9fb 100%);
+        padding: 60px 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .supp-card {
+        background: #ffffff;
+        border-radius: 24px;
+        max-width: 900px;
+        width: 100%;
+        padding: 25px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Feature Boxes */
+      .supp-features {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 18px;
+        flex-wrap: wrap;
+      }
+
+      .supp-feature-box {
+        background: #cfebfc;
+        border-radius: 12px;
+        padding: 14px 16px;
+        flex: 1;
+        min-width: 220px;
+      }
+
+      .supp-feature-box h4 {
+        font-size: 15px;
+        margin: 0 0 6px;
+        color: #384653;
+        font-weight: 600;
+      }
+
+      .supp-feature-box p {
+        font-size: 13px;
+        margin: 0;
+        color: #4b5563;
+        line-height: 1.4;
+      }
+
+      /* Info Bar */
+      .supp-info-bar {
+        background: #cfebfc;
+        border-radius: 18px;
+        padding: 14px 16px 40px 16px;
+        font-size: 14px;
+        color: #384653;
+        margin-bottom: 20px;
+        text-align: left;
+        font-weight: 500;
+      }
+
+      /* Image */
+      .supp-image-box {
+        border-radius: 14px;
+        overflow: hidden;
+      }
+
+      .supp-image-box img {
+        width: 100%;
+        display: block;
+        border-radius: 14px;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .supp-features {
+          flex-direction: column;
+        }
+
+        .supp-card {
+          padding: 18px;
+        }
+
+        .supp-info-bar {
+          font-size: 13px;
+        }
+      }
+    </style>
+
+    <div class="supp-wrapper">
+      <div class="supp-card">
+        <!-- Top Feature Boxes -->
+        <div class="supp-features">
+          <div class="supp-feature-box">
+            <h4>30+ Language Support</h4>
+            <p>accessible for multilingual and ESL learners</p>
+          </div>
+
+          <div class="supp-feature-box">
+            <h4>24/7 AI Personal Tutor</h4>
+            <p>web based, no headset needed, anytime, anywhere</p>
+          </div>
+
+          <div class="supp-feature-box">
+            <h4>Works for Everyone</h4>
+            <p>students, parents, educators, and working adults</p>
+          </div>
+        </div>
+
+        <!-- Info Bar -->
+        <div class="supp-info-bar">
+          Upload PDFs and Text Book Materials – Get real-time explanations and
+          translations
+        </div>
+
+        <!-- Image Section -->
+        <div class="supp-image-box">
+          <img src="section11.png" alt="Team Learning" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

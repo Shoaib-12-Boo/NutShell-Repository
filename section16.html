@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .asdf-maindiv {
+        background: linear-gradient(180deg, #a8d6f3 0%, #cfe9fb 100%);
+        padding: 60px 16px;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Layout Container */
+      .asdf-main-wrapper {
+        font-family: "Montserrat", Barlow;
+        background-color: #ffffff;
+        border-radius: 24px;
+        padding: 50px 40px;
+        max-width: 900px;
+        margin: 20px auto;
+        text-align: center;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Header Section */
+      .asdf-sub-headline {
+        color: #75bae6;
+        font-size: 23px;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .asdf-headline {
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+
+      /* Responsive Grid */
+      .asdf-flex-row {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        text-align: left;
+        margin-bottom: 40px;
+      }
+
+      .asdf-col {
+        flex: 0 1 350px;
+      }
+
+      .asdf-col-title {
+        font-size: 23px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #2589c9; /* Matches the 'Learners' and 'Outcomes' color */
+      }
+
+      /* List Styling */
+      .asdf-ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .asdf-li {
+        font-size: 14px;
+        color: #384653;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: flex-start;
+        line-height: 1.1;
+      }
+
+      /* Left Side: Dot Bullet */
+      .asdf-li-dot::before {
+        content: "•";
+        color: #333c4e;
+        font-weight: bold;
+        margin-right: 12px;
+      }
+
+      /* Right Side: Dot + Checkmark */
+      .asdf-li-check::before {
+        content: "•";
+        color: #333c4e;
+        font-weight: bold;
+        margin-right: 12px;
+        white-space: nowrap;
+        font-size: 14px;
+      }
+
+      /* Movement Text */
+      .asdf-movement-box {
+        max-width: 850px;
+        margin: 0 auto 40px auto;
+        font-size: 18px;
+        color: #333c4e;
+        line-height: 1.6;
+      }
+
+      .asdf-weight-700 {
+        font-weight: 700;
+      }
+
+      /* Image */
+      .asdf-hero-img-container {
+        width: 100%;
+        border-radius: 25px;
+        overflow: hidden;
+      }
+
+      .asdf-hero-img-container img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 767px) {
+        .asdf-flex-row {
+          flex-direction: column;
+          gap: 30px;
+          padding-left: 20px;
+        }
+        .asdf-main-wrapper {
+          padding: 30px 15px;
+        }
+        .asdf-headline {
+          font-size: 24px;
+        }
+      }
+    </style>
+    <div class="asdf-maindiv">
+      <div class="asdf-main-wrapper">
+        <div class="asdf-sub-headline">
+          Real Time Transformations — Who it's for & What it Solves
+        </div>
+        <h1 class="asdf-headline">KreditVerse Serves Many Audiences</h1>
+
+        <div class="asdf-flex-row">
+          <div class="asdf-col">
+            <h3 class="asdf-col-title">Learners:</h3>
+            <ul class="asdf-ul">
+              <li class="asdf-li asdf-li-dot">Teens entering adulthood</li>
+              <li class="asdf-li asdf-li-dot">College students</li>
+              <li class="asdf-li asdf-li-dot">Young adults</li>
+              <li class="asdf-li asdf-li-dot">New Americans</li>
+              <li class="asdf-li asdf-li-dot">Struggling workers</li>
+              <li class="asdf-li asdf-li-dot">Career changers</li>
+              <li class="asdf-li asdf-li-dot">Job seekers</li>
+              <li class="asdf-li asdf-li-dot">
+                Adults needing financial mastery
+              </li>
+            </ul>
+          </div>
+
+          <div class="asdf-col">
+            <h3 class="asdf-col-title">Outcomes:</h3>
+            <ul class="asdf-ul">
+              <li class="asdf-li asdf-li-check">✓ financial competence</li>
+              <li class="asdf-li asdf-li-check">✓ career clarity</li>
+              <li class="asdf-li asdf-li-check">✓ adulting skills</li>
+              <li class="asdf-li asdf-li-check">✓ STEM understanding</li>
+              <li class="asdf-li asdf-li-check">✓ communication improvement</li>
+              <li class="asdf-li asdf-li-check">✓ personal confidence</li>
+              <li class="asdf-li asdf-li-check">✓ global awareness</li>
+              <li class="asdf-li asdf-li-check">✓ future readiness</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="asdf-movement-box">
+          <span class="asdf-weight-700"
+            >Everyone who joins becomes part of the Next Generation Ready™
+            Movement — people committed to building capability, confidence, and
+            opportunity for today's world.</span
+          >
+        </div>
+
+        <div class="asdf-hero-img-container">
+          <img src="section15.png" alt="Successful group of people" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

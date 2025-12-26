@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Founding Family Bundle</title>
+  </head>
+
+  <style>
+    .abcdf-body-container {
+      margin: 0;
+      padding: 60px 20px;
+      background: linear-gradient(180deg, #a8d6f3 0%, #cfe9fb 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .abcdf-card {
+      background: #ffffff;
+      width: 100%;
+      max-width: 900px;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 4px 1px 0px 8px #6fb1e3;
+    }
+
+    .abcdf-tagline {
+      color: #75bae6;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .abcdf-main-title {
+      color: #2e3c4e;
+      font-size: 32px;
+      margin-top: 8px;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .abcdf-feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .abcdf-list-item {
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 15px;
+      color: #334e68;
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Custom Checkmark Circle */
+    .abcdf-list-item::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-color: #d8eefe;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #1a3a5a;
+      font-size: 10px;
+      font-weight: bold;
+      border: 1px solid #5857561f;
+    }
+
+    .abcdf-divider {
+      height: 3px;
+      background-color: #93969ba1;
+      margin: 40px 0 25px 0;
+    }
+
+    .abcdf-pricing-footer {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .abcdf-total-value {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1a3a5a;
+    }
+
+    .abcdf-price-section {
+      text-align: left;
+    }
+
+    .abcdf-current-price {
+      font-size: 42px;
+      font-weight: 700;
+      color: #2589c9;
+    }
+
+    .abcdf-monthly-installment {
+      font-size: 18px;
+      color: #384653;
+      margin-top: 5px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .abcdf-card {
+        padding: 25px;
+      }
+
+      .abcdf-main-title {
+        font-size: 22px;
+      }
+
+      .abcdf-pricing-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .abcdf-price-section {
+        text-align: left;
+      }
+
+      .abcdf-total-value {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+
+  <body>
+    <div class="abcdf-body-container">
+      <div class="abcdf-card">
+        <header class="abcdf-card-header">
+          <span class="abcdf-tagline">VALUE STACK</span>
+          <h1 class="abcdf-main-title">
+            Your Founding Family Bundle includes:
+          </h1>
+        </header>
+
+        <ul class="abcdf-feature-list">
+          <li class="abcdf-list-item">✓ Meta Quest Headset</li>
+          <li class="abcdf-list-item">
+            ✓ 12 DOE-aligned financial simulations
+          </li>
+          <li class="abcdf-list-item">✓ One CTE Career Pathway</li>
+          <li class="abcdf-list-item">✓ STEM Labs</li>
+          <li class="abcdf-list-item">✓ 150+ global experiences</li>
+          <li class="abcdf-list-item">✓ FutureReady AI Coach</li>
+          <li class="abcdf-list-item">✓ AI Interview Simulator</li>
+          <li class="abcdf-list-item">✓ Parent/Adult/Learner Dashboard</li>
+          <li class="abcdf-list-item">✓ 12 Months of Monthly Masterclasses</li>
+          <li class="abcdf-list-item">✓ Founders Badge</li>
+          <li class="abcdf-list-item">✓ Next Generation Ready™ Swag Pack</li>
+          <li class="abcdf-list-item">
+            Automatic Enrollment into our KreditVerse 12 Month Master Class
+            Program
+          </li>
+          <li class="abcdf-list-item">
+            Unlimited Access to KREDITVERSITY - Thousands of Hours Educational
+            Streaming Content
+          </li>
+        </ul>
+
+        <div class="abcdf-divider"></div>
+
+        <footer class="abcdf-pricing-footer">
+          <div class="abcdf-total-value">Total Value: $4,500+</div>
+          <div class="abcdf-price-section">
+            <div class="abcdf-current-price">Today: $1,999</div>
+            <div class="abcdf-monthly-installment">or $83/month</div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

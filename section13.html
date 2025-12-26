@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="aibb-dashboard-wrapper">
+  <div class="aibb-dashboard-card">
+
+    <h2 class="aibb-dashboard-title">
+      <span class="aibb-title-number">7.</span>
+      Parent / Adult / Learner Dashboard
+    </h2>
+
+    <div class="aibb-track-section">
+      <span class="aibb-track-label">Track:</span>
+
+      <div class="aibb-track-list">
+
+        <div class="aibb-track-item">
+          <span class="aibb-track-icon">✓</span>
+          <span class="aibb-track-text">decision patterns</span>
+        </div>
+
+        <div class="aibb-track-item">
+          <span class="aibb-track-icon">S</span>
+          <span class="aibb-track-text">financial choices</span>
+        </div>
+
+        <div class="aibb-track-item">
+          <span class="aibb-track-icon">↑</span>
+          <span class="aibb-track-text">progress</span>
+        </div>
+
+        <div class="aibb-track-item">
+          <span class="aibb-track-icon">✦</span>
+          <span class="aibb-track-text">mastery</span>
+        </div>
+
+        <div class="aibb-track-item">
+          <span class="aibb-track-icon">+</span>
+          <span class="aibb-track-text">engagement</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="aibb-image-container">
+      <img
+        src="section13.png"
+        alt="Dashboard Preview"
+        class="aibb-dashboard-image"
+      />
+    </div>
+
+  </div>
+</div>
+
+<style>
+/* Wrapper */
+.aibb-dashboard-wrapper {
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #a8d6f3 0%, #cfe9fb 100%);
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.aibb-dashboard-card {
+  max-width: 900px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 4px 1px 0px 8px #6fb1e3;
+}
+
+
+/* Title */
+.aibb-dashboard-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f2a44;
+  margin: 18px 0 26px;
+}
+
+/* Blue number */
+.aibb-title-number {
+  color: #5aa9e6;
+}
+
+/* Track section */
+.aibb-track-section {
+  margin-bottom: 24px;
+}
+
+.aibb-track-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2a44;
+}
+
+/* Track grid */
+.aibb-track-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* Track item */
+.aibb-track-item {
+  position: relative;
+  border: 1px solid #c8ddf0;
+  border-radius: 12px;
+  padding: 26px 12px 14px;
+  text-align: left;;
+  background: #ffffff;
+}
+
+.aibb-track-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+}
+
+
+/* Icon – top center INSIDE border */
+.aibb-track-icon {
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 24px;
+  height: 24px;
+  background: #6bb7e8;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text below icon */
+.aibb-track-text {
+  font-size: 14px;
+  color: #1f2a44;
+}
+
+/* Image */
+.aibb-image-container {
+  margin-top: 22px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.aibb-dashboard-image {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aibb-track-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .aibb-track-list {
+    grid-template-columns: 1fr;
+  }
+
+  .aibb-dashboard-title {
+    font-size: 18px;
+  }
+}
+</style>
+
+</body>
+</html>

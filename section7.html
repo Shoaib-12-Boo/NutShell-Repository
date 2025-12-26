@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+    .cte-section {
+  background: linear-gradient(180deg, #9fd0f1, #cde8fb);
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cte-card {
+  background: #ffffff;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 4px 1px 0px 8px #6fb1e3;
+}
+
+/* Typography */
+.cte-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f3c88;
+  margin-bottom: 5px;
+}
+
+.cte-step {
+  color: #2a7be4;
+}
+
+.cte-subtitle {
+  font-size: 22px;
+  color: #2E3C4E;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.cte-description {
+  font-size: 18px;
+  color: #384653;
+  margin-bottom: 20px;
+}
+
+/* Options Grid */
+.cte-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.cte-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #384653;
+}
+
+.cte-icon {
+  width: 26px;
+  height: 26px;
+  fill: #2a7be4;
+  flex-shrink: 0;
+}
+
+/* Note */
+.cte-note {
+  font-size: 18px;
+  color: #063E5F;
+  margin-bottom: 20px;
+}
+
+/* Image */
+.cte-image-wrapper {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.cte-main-image {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+}
+
+/* ========================= */
+/* ===== RESPONSIVE ======== */
+/* ========================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .cte-card {
+    padding: 24px;
+  }
+
+  .cte-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cte-heading {
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .cte-section {
+    padding: 25px 12px;
+  }
+
+  .cte-card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .cte-heading {
+    font-size: 18px;
+  }
+
+  .cte-description {
+    font-size: 14px;
+  }
+
+  .cte-options {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .cte-option {
+    font-size: 13px;
+  }
+
+  .cte-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .cte-note {
+    font-size: 13px;
+  }
+}
+</style>
+
+    <div class="cte-section">
+  <div class="cte-card">
+
+    <h2 class="cte-heading">
+      <span class="cte-step">2.</span> CTE Career Pathway Simulations
+    </h2>
+    <p class="cte-subtitle">(Choose One)</p>
+
+    <p class="cte-description">
+      Hands-on exploration of high-demand, high-income fields:
+    </p>
+
+    <div class="cte-options">
+
+      <div class="cte-option">
+        <svg class="cte-icon" viewBox="0 0 24 24">
+          <path d="M12 2C8 7 6 10 6 13a6 6 0 0012 0c0-3-2-6-6-11z"/>
+        </svg>
+        <span>HVAC</span>
+      </div>
+
+      <div class="cte-option">
+        <svg class="cte-icon" viewBox="0 0 24 24">
+          <path d="M2 21l7-7 2 2-7 7H2zm12.5-12.5l-2-2L17 2l2 2-4.5 4.5z"/>
+        </svg>
+        <span>Carpentry</span>
+      </div>
+
+      <div class="cte-option">
+        <svg class="cte-icon" viewBox="0 0 24 24">
+          <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
+        </svg>
+        <span>Welding</span>
+      </div>
+
+      <div class="cte-option">
+        <svg class="cte-icon" viewBox="0 0 24 24">
+          <path d="M12 8l4-4 4 4-4 4-4-4zm-4 4l4 4-4 4-4-4 4-4zm8 0l4 4-4 4-4-4 4-4z"/>
+        </svg>
+        <span>Drone Operation</span>
+      </div>
+
+      <div class="cte-option">
+        <svg class="cte-icon" viewBox="0 0 24 24">
+          <path d="M12 2l2 5h5l-4 3 2 5-5-3-5 3 2-5-4-3h5l2-5z"/>
+        </svg>
+        <span>Nursing Assistant</span>
+      </div>
+
+    </div>
+
+    <p class="cte-note">
+      Learners test-drive careers before investing years or money.
+    </p>
+
+    <div class="cte-image-wrapper">
+      <img
+        src="section7.png"
+        alt="Career Simulation"
+        class="cte-main-image"
+      >
+    </div>
+
+  </div>
+</div>
+
+  </body>
+</html>

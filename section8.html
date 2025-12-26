@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .ghl-immersive-labs-section {
+        background-color: #a8d5f1; /* Light blue background from image */
+        padding: 60px 20px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+      }
+
+      .ghl-labs-container {
+        background-color: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        padding: 40px;
+        border-radius: 24px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .ghl-labs-title {
+        color: #1a4a7c;
+        font-size: 28px;
+        font-weight: 800;
+        margin-bottom: 10px;
+      }
+
+      .ghl-labs-title span {
+        color: #3b82f6;
+      }
+
+      .ghl-labs-subtitle {
+        font-size: 18px;
+        color: #384653;
+        font-weight: 600;
+        margin-bottom: 25px;
+      }
+
+      /* Grid Layout */
+      .ghl-labs-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        margin-bottom: 15px;
+      }
+
+      .ghl-lab-card {
+        background-color: #e0effa;
+        border-radius: 8px;
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        transition: transform 0.2s ease;
+      }
+
+      .ghl-full-width {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+
+      /* Icon Placeholders (Use your own SVGs or FontAwesome here) */
+      .ghl-icon-box {
+        width: 30px;
+        height: 30px;
+        background-color: #3b82f6;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .ghl-lab-name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #384653;
+      }
+
+      /* Image Section */
+      .ghl-labs-image-wrapper {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+
+      .ghl-labs-hero-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
+
+      /* Mobile Responsiveness */
+      @media (max-width: 768px) {
+        .ghl-labs-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .ghl-labs-grid {
+          grid-template-columns: 1fr;
+        }
+        .ghl-labs-container {
+          padding: 20px;
+        }
+      }
+    </style>
+
+    <div class="ghl-immersive-labs-section">
+      <div class="ghl-labs-container">
+        <h2 class="ghl-labs-title">
+          <span>3.</span> STEM & STEAM Immersive Labs
+        </h2>
+        <p class="ghl-labs-subtitle">Simulations that bring science to life:</p>
+
+        <div class="ghl-labs-grid">
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box chemistry-icon"></div>
+            <span class="ghl-lab-name">Chemistry</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box biology-icon"></div>
+            <span class="ghl-lab-name">Biology</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box anatomy-icon"></div>
+            <span class="ghl-lab-name">Anatomy</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box engineering-icon"></div>
+            <span class="ghl-lab-name">Engineering</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box earth-icon"></div>
+            <span class="ghl-lab-name">Earth Science</span>
+          </div>
+          <div class="ghl-lab-card">
+            <div class="ghl-icon-box astronomy-icon"></div>
+            <span class="ghl-lab-name">Astronomy</span>
+          </div>
+        </div>
+
+        <div class="ghl-lab-card ghl-full-width">
+          <div class="ghl-icon-box space-icon"></div>
+          <span class="ghl-lab-name">Space Exploration</span>
+        </div>
+
+        <div class="ghl-labs-image-wrapper">
+          <img
+            src="section8.png"
+            alt="Student using VR in Science Lab"
+            class="ghl-labs-hero-img"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

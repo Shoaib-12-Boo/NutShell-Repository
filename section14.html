@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .abghl-wrapper {
+        background: linear-gradient(180deg, #a8d6f3 0%, #cfe9fb 100%);
+        padding: 60px 16px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .abghl-card {
+        background: #ffffff;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 24px;
+        padding: 24px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Header */
+      .abghl-header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .abghl-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #2e3c4e;
+      }
+
+      .abghl-subtitle {
+        font-size: 36px;
+        color: #2e3c4e;
+      }
+
+      /* Hero */
+      .abghl-hero {
+        margin: 20px 0;
+      }
+
+      .abghl-hero-svg {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Description */
+      .abghl-description {
+        font-size: 15px;
+        color: #384653;
+        margin-bottom: 24px;
+      }
+
+      /* Features */
+      .abghl-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-bottom: 30px;
+      }
+
+			.abghl-bottom {
+				padding-bottom: 15px;
+			}
+
+      .abghl-hero-img,
+      .abghl-bottom-img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        display: block;
+        object-fit: cover;
+      }
+
+      .abghl-feature {
+        gap: 12px;
+      }
+
+      .abghl-icon {
+        font-size: 22px;
+      }
+
+      .abghl-feature h4 {
+        font-size: 20px;
+        margin: 0 0 4px;
+        color: #384653;
+        font-weight: 700;
+      }
+
+      .abghl-feature p {
+        font-size: 14px;
+        color: #384653;
+        margin: 0;
+      }
+
+      /* Bottom Image */
+      .abghl-bottom-svg {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+      }
+
+      /* Responsive */
+      @media (max-width: 640px) {
+        .abghl-title {
+          font-size: 20px;
+        }
+
+        .abghl-features {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    <div class="abghl-wrapper">
+      <!-- Card -->
+      <div class="abghl-card">
+        <!-- Header -->
+        <div class="abghl-header">
+          <h1 class="abghl-title">Welcome to KreditVersity EDU Streaming.</h1>
+          <p class="abghl-subtitle">
+            Thousands of Hours of Learning – Free with every headset
+          </p>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="abghl-hero">
+          <img
+            class="abghl-hero-img"
+            src="section14-1.png"
+            alt="VR Learning Experience"
+          />
+        </div>
+
+        <!-- Description -->
+        <p class="abghl-description">
+          Unlock a complete library of <b> premium educational content </b>included free
+          with every KreditVerse headset. From STEM to financial education,
+          mindset, wellness, global history, and entrepreneurship — you get <b>
+          unlimited access </b> to the hottest topics shaping today’s world.
+          KreditVerse EDU transforms your headset into a 24/7 <b> daily learning
+          hub,</b> empowering parents, students, new professionals, and lifelong
+          learners alike.
+        </p>
+
+        <!-- Features -->
+        <div class="abghl-features">
+          <div class="abghl-feature">
+            <span class="abghl-icon">📘</span>
+            <div>
+              <h4>Financial Literacy</h4>
+              <p>Money, savings and real-world finance skills.</p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">🧪</span>
+            <div>
+              <h4>STEM & Future Careers</h4>
+              <p>Science, technology and innovation learning.</p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">💼</span>
+            <div>
+              <h4>Soft Skills Growth</h4>
+              <p>Communication, leadership and confidence.</p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">🧠</span>
+            <div>
+              <h4>Wellness & Mindset</h4>
+              <p>Mental clarity, focus and self-improvement.</p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">📖</span>
+            <div>
+              <h4>Language Learning</h4>
+              <p>Global opportunities powered by immersive repetition.</p>
+              <p>
+                All delivered in a format
+                <b> 10x more engaging than traditional learning</b>
+              </p>
+            </div>
+          </div>
+
+          <div class="abghl-feature">
+            <span class="abghl-icon">👨‍🎓</span>
+            <div>
+              <h4>Life Skills</h4>
+              <p>
+                Job prep, resume building, decision-making, conflict resolution
+              </p>
+              <p>right inside the headset you’re already using.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Image -->
+        <div class="abghl-bottom">
+          <img
+            class="abghl-bottom-img"
+            src="section14-2.png"
+            alt="VR Living Room Experience"
+          />
+        </div>
+				<p>Your education doesn’t end when the simulation does — KreditVerse EDU gives you endless ways to grow every day.</p>
+      </div>
+    </div>
+  </body>
+</html>

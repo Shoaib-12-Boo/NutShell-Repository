@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Masterclass Series Flyer</title>
+    <style>
+      /* Base styles */
+      body {
+        margin: 0;
+        padding: 20px;
+        background-color: #a9d6f1; /* Light blue background from image */
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        justify-content: center;
+        color: #333;
+      }
+
+      .lkjh-container {
+        max-width: 900px;
+        background-color: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+        padding: 40px;
+        text-align: center;
+      }
+
+      /* Typography */
+      .lkjh-header-top {
+        color: #75bae6;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        font-size: 52px;
+      }
+
+      .lkjh-header-main {
+        color: #75bae6;
+        font-weight: 700;
+        font-size: 52px;
+        margin-top: 0;
+        text-transform: uppercase;
+      }
+
+      .lkjh-subheadline {
+        font-size: 34px;
+        font-weight: 700;
+        color: #384653;
+        margin: 25px 0 10px 0;
+      }
+
+      .lkjh-intro-text {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #384653;
+        font-weight: 700;
+        margin: 0 auto 30px auto;
+      }
+
+      /* Expert Cards Section */
+      .lkjh-experts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 15px;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+
+      .lkjh-expert-card {
+        border: 1px solid #d1e8f7;
+        border-radius: 12px;
+        padding: 20px;
+        background-color: #fcfdfe;
+      }
+
+      .lkjh-expert-title {
+        font-weight: 700;
+        font-size: 1rem;
+        color: #384653;
+        margin-bottom: 8px;
+        display: block;
+      }
+
+      .lkjh-expert-desc {
+        font-size: 14px;
+        text-align: left;
+        line-height: 1.4;
+        color: #384653;
+      }
+
+      /* Features List */
+      .lkjh-features-box {
+        text-align: left;
+        margin-bottom: 25px;
+      }
+
+      .lkjh-features-box h4 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+
+      .lkjh-features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .lkjh-features-list li {
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .lkjh-features-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #333;
+      }
+
+      /* Callout Text */
+      .lkjh-emphasis-text {
+        color: #384653;
+        font-weight: 700;
+        text-align: left;
+        font-size: 18px;
+        margin: 25px 0;
+      }
+
+      .lkjh-quote-bar {
+        border-left: 4px solid #5bb0e5;
+        padding: 10px 20px;
+        text-align: left;
+        font-size: 18px;
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .lkjh-value-tag {
+        color: #1b6ca8;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+
+      /* Image Section */
+      .lkjh-image-wrapper {
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      .lkjh-image-wrapper img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 600px) {
+        .lkjh-container {
+          padding: 20px;
+        }
+        .lkjh-header-main {
+          font-size: 1.6rem;
+        }
+        .lkjh-header-top {
+          font-size: 1.1rem;
+        }
+        .lkjh-subheadline {
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="lkjh-container">
+      <header>
+        <div class="lkjh-header-top">NEXT GENERATION READY™</div>
+        <h1 class="lkjh-header-main">MASTERCLASS SERIES</h1>
+        <h2 class="lkjh-subheadline">
+          12 Months of Expert-Led Deep Training — Included Free
+        </h2>
+        <p class="lkjh-intro-text">
+          Every month, your family joins a live Masterclass that breaks down one
+          chapter of the KreditVerse 12-Course Financial Literacy Curriculum.
+        </p>
+      </header>
+
+      <section>
+        <p
+          style="
+            text-align: left;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #384653;
+          "
+        >
+          These sessions are led by:
+        </p>
+        <div class="lkjh-experts-grid">
+          <div class="lkjh-expert-card">
+            <span class="lkjh-expert-title">Financial literacy experts</span>
+            <span class="lkjh-expert-desc"
+              >who teach credit, budgeting, banking, taxes, loans, investing,
+              insurance, and money management</span
+            >
+          </div>
+          <div class="lkjh-expert-card">
+            <span class="lkjh-expert-title">AI specialists</span>
+            <span class="lkjh-expert-desc"
+              >who explain how emerging technology impacts jobs, careers, and
+              earning potential</span
+            >
+          </div>
+          <div class="lkjh-expert-card">
+            <span class="lkjh-expert-title"
+              >CTE and skilled-trade professionals</span
+            >
+            <span class="lkjh-expert-desc"
+              >who give real-world insight into HVAC, electrical, plumbing,
+              welding, carpentry, healthcare, drone operations, and other
+              high-demand pathways</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="lkjh-features-box">
+        <h4>Each Masterclass includes:</h4>
+        <ul class="lkjh-features-list">
+          <li>A guided walkthrough of that month's module</li>
+          <li>Tools, worksheets, and action steps</li>
+          <li>Q&A for families and learners</li>
+        </ul>
+      </section>
+
+      <section>
+        <p class="lkjh-emphasis-text">
+          This is not more content — it is clarity, context, and confidence
+          delivered every month.
+        </p>
+
+        <div class="lkjh-quote-bar">
+          Simulations teach the experience. Masterclasses teach the
+          understanding. Together, they build true financial and career
+          readiness.
+        </div>
+
+        <p class="lkjh-value-tag">
+          $1,200 annual value — included FREE for Founding Families.
+        </p>
+      </section>
+
+      <div class="lkjh-image-wrapper">
+        <img
+          src="section19.png"
+          alt="Family watching educational masterclass"
+        />
+      </div>
+    </div>
+  </body>
+</html>

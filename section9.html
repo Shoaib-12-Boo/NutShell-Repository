@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+    /* Container styling to match the light blue background */
+.sho-global-container {
+  background-color: #a9d4f5; 
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* The White Card */
+.sho-global-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 45px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 4px 1px 0px 8px #6fb1e3;
+}
+
+/* Typography */
+.sho-global-title {
+  color: #2E3C4E;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+
+.sho-global-number {
+  color: #4a90e2; /* Bright blue for the number */
+}
+
+.sho-global-subtitle {
+  font-weight: 700;
+  font-size: 22px;
+  text-align: left;
+  color: #2E3C4E;
+  margin: 0 0 20px 0;
+}
+
+.sho-global-intro {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  color: #384653;
+  margin-bottom: 25px;
+}
+
+/* List Column Layout */
+.sho-global-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-bottom: 30px;
+}
+
+.sho-global-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  width: 250px;
+}
+
+.sho-global-list li {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 8px;
+  padding-left: 15px;
+  position: relative;
+}
+
+.sho-global-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #333;
+}
+
+.sho-global-more {
+  font-weight: 800;
+  font-size: 13px;
+  color: #333;
+}
+
+/* Gallery Grid */
+.sho-global-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Matching the 5-column layout in image */
+  gap: 12px;
+}
+
+.sho-global-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Keeps images square */
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+/* Last image positioning (the cockpit) */
+.sho-global-item:nth-child(6) {
+  grid-column: 1; /* Starts on the next row */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sho-global-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .sho-global-list-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sho-global-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+</style>
+
+    <div class="sho-global-container">
+  <div class="sho-global-card">
+    <h2 class="sho-global-title"><span class="sho-global-number">4.</span> Global Exploration</h2>
+    <p class="sho-global-subtitle">(150+ experiences)</p>
+    <p class="sho-global-intro">Travel through immersive simulations, building global awareness:</p>
+
+    <div class="sho-global-list-container">
+      <ul class="sho-global-list">
+        <li>Egypt</li>
+        <li>NASA</li>
+        <li>Rome</li>
+        <li>Eiffel Tower</li>
+      </ul>
+      <ul class="sho-global-list">
+        <li>National Parks</li>
+        <li>African Wildlife</li>
+        <li>Space Missions</li>
+      </ul>
+      <div class="sho-global-more">and more...</div>
+    </div>
+
+    <div class="sho-global-grid">
+      <div class="sho-global-item"><img src="section9-4.png" alt="Egypt"></div>
+      <div class="sho-global-item"><img src="section9-3.png" alt="Rome"></div>
+      <div class="sho-global-item"><img src="section9-5.png" alt="Eiffel Tower"></div>
+      <div class="sho-global-item"><img src="section9-2.png" alt="NASA"></div>
+      <div class="sho-global-item"><img src="section9-6.png" alt="Wildlife"></div>
+      <div class="sho-global-item"><img src="section9-1.png" alt="Space"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
