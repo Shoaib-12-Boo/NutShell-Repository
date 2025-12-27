@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cost-container">
+      <div class="cost-overlay">
+        <div class="cost-content">
+          <h1 class="cost-title">COST OF DOING NOTHING</h1>
+          <h2 class="cost-subtitle">The Price of Waiting</h2>
+
+          <div class="cost-grid">
+            <div class="cost-card">Financial mistakes take years to fix.</div>
+            <div class="cost-card">Career confusion costs thousands.</div>
+            <div class="cost-card">
+              Lack of confidence blocks opportunities.
+            </div>
+            <div class="cost-card">
+              Missing life skills delays independence.
+            </div>
+          </div>
+
+          <p class="cost-footer">
+            <strong
+              >Preparing now is cheaper — and pays dividends for life.</strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      /* Container & Background */
+      .cost-container {
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        width: 100%;
+        max-width: 1000px;
+        margin: 20px auto;
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+        /* Placeholder background image - replace with your actual image URL */
+        background: url("section23.avif") no-repeat center center;
+        background-size: cover;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Dark Overlay for text readability */
+      .cost-overlay {
+        background: linear-gradient(rgba(58, 56, 59, 0.2), rgba(54, 53, 63, 0.2));
+        padding: 30px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+      }
+
+      .cost-content {
+        text-align: center;
+        max-width: 900px;
+        width: 100%;
+      }
+
+      .cost-title {
+        color: #ffffff;
+        font-size: clamp(24px, 5vw, 42px);
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .cost-subtitle {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: 700;
+        margin: 5px 0 30px 0;
+        opacity: 0.9;
+      }
+
+      /* Grid Layout for Cards */
+      .cost-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      /* Card Styling (Glassmorphism) */
+      .cost-card {
+        background: rgba(255, 255, 255, 0.95);
+        color: #384653; /* Dark navy blue */
+        padding: 15px 15px;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: left;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s ease;
+      }
+
+      .cost-footer {
+        color: #ffffff;
+        font-size: 20px;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 600px) {
+        .cost-overlay {
+          padding: 40px 15px;
+        }
+        .cost-grid {
+          grid-template-columns: 1fr;
+        }
+        .cost-card {
+          font-size: 16px;
+          padding: 18px;
+        }
+      }
+    </style>
+  </body>
+</html>

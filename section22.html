@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* Container and Background */
+      .zasd-popup-overlay {
+        background-color: #a5d8f3;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .zasd-popup-container {
+        background: white;
+        width: 100%;
+        max-width: 900px;
+        border-radius: 24px;
+        padding: 40px 40px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+        box-sizing: border-box;
+      }
+
+      /* Typography */
+      .zasd-tagline {
+        color: #75bae6;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-align: left;
+      }
+
+      .zasd-main-title {
+        color: #2e3c4e;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0 0 15px 0;
+        text-align: center;
+      }
+
+      .zasd-hero-text {
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: left;
+        margin: 0 0 30px 0;
+      }
+
+      .zasd-text-blue {
+        color: #2589c9;
+      }
+
+      /* Grid Layout */
+      .zasd-features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 40px;
+        margin-bottom: 40px;
+      }
+
+      .zasd-feature-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #384653;
+        font-size: 18px;
+        text-align: left;
+      }
+
+      .zasd-arrow {
+        color: #777;
+        font-size: 25px;
+      }
+
+      .zasd-check {
+        font-weight: bold;
+      }
+
+      /* Form Elements */
+      .zasd-input-wrapper {
+        position: relative;
+        margin-bottom: 15px;
+      }
+
+      .zasd-mail-icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #555;
+      }
+
+      .zasd-input {
+        width: 100%;
+        padding: 18px 18px 18px 45px;
+        background-color: #cfeafc;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        color: #444;
+        box-sizing: border-box;
+      }
+
+      .zasd-input::placeholder {
+        color: #333;
+        font-weight: 600;
+      }
+
+      .zasd-submit-btn {
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        color: #384653;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.1s ease;
+      }
+
+      .zasd-submit-btn:active {
+        transform: translateY(2px);
+      }
+
+      .zasd-footer {
+        margin-top: 25px;
+        font-size: 12px;
+        color: #384653;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .zasd-popup-container {
+          padding: 30px 20px;
+          text-align: center;
+        }
+
+        .zasd-hero-text {
+          font-size: 24px;
+        }
+
+        .zasd-features-grid {
+          grid-template-columns: 1fr;
+          text-align: left;
+        }
+
+        .zasd-main-title {
+          font-size: 22px;
+        }
+      }
+    </style>
+
+    <div class="zasd-popup-overlay">
+      <div class="zasd-popup-container">
+        <header class="zasd-header">
+          <p class="zasd-tagline">POPUP EMAIL CAPTURE (Exit Intent + Scroll)</p>
+          <h2 class="zasd-main-title">
+            Wait — Don't Leave Without Your Free Bundle!
+          </h2>
+          <h1 class="zasd-hero-text">
+            Get the
+            <span class="zasd-text-blue">Future-Ready Starter Bundle</span>
+            FREE:
+          </h1>
+        </header>
+
+        <div class="zasd-features-grid">
+          <div class="zasd-feature-item">
+            <span class="zasd-arrow">→</span>
+            <span class="zasd-check">✓</span>
+            <span class="zasd-feature-label">Life Skills Guide</span>
+          </div>
+          <div class="zasd-feature-item">
+            <span class="zasd-arrow">→</span>
+            <span class="zasd-check">✓</span>
+            <span class="zasd-feature-label">Masterclass Pass</span>
+          </div>
+          <div class="zasd-feature-item">
+            <span class="zasd-arrow">→</span>
+            <span class="zasd-check">✓</span>
+            <span class="zasd-feature-label">Simulation Sneak Peek</span>
+          </div>
+          <div class="zasd-feature-item">
+            <span class="zasd-arrow">→</span>
+            <span class="zasd-check">✓</span>
+            <span class="zasd-feature-label">Career Clarity Tool</span>
+          </div>
+        </div>
+
+        <form class="zasd-form">
+          <div class="zasd-input-wrapper">
+            <span class="zasd-mail-icon">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </span>
+            <input
+              type="email"
+              class="zasd-input"
+              placeholder="[ Email Field ]"
+              required
+            />
+          </div>
+          <button type="submit" class="zasd-submit-btn">
+            Unlock Free Bundle
+          </button>
+        </form>
+
+        <footer class="zasd-footer">
+          Triggers at: exit intent, 50% scroll, or 30 seconds idle.
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

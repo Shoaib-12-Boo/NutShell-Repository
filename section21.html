@@ -22,15 +22,15 @@
       .Quest-faq-label {
         color: #6fb2d2;
         font-weight: 700;
-        font-size: 14px;
+        font-size: 18px;
         letter-spacing: 1px;
         text-transform: uppercase;
       }
 
       .Quest-faq-title {
-        color: #1a2b4b;
-        font-size: 32px;
-        font-weight: 800;
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
         margin-top: 8px;
         margin-bottom: 30px;
       }
@@ -48,12 +48,14 @@
 
       /* Sidebar Icon Box */
       .Quest-faq-icon-box {
-        background-color: #e3f2fd;
+        background-color: #cfeafc;
         padding: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 60px;
+        max-width: 30px;
+        width: 100%;
+        height: -webkit-fill-available;
       }
 
       .Quest-faq-icon-box svg {
@@ -64,20 +66,20 @@
 
       /* Content Area */
       .Quest-faq-content {
-        padding: 20px 25px;
+        padding: 15px 20px;
       }
 
       .Quest-faq-question {
         margin: 0 0 8px 0;
         font-weight: 700;
-        font-size: 17px;
-        color: #1a2b4b;
+        font-size: 18px;
+        color: #384653;
       }
 
       .Quest-faq-answer {
         margin: 0;
-        font-size: 15px;
-        color: #64748b;
+        font-size: 14px;
+        color: #384653;
         line-height: 1.5;
       }
 
@@ -207,15 +209,28 @@
 
         <div class="Quest-faq-item">
           <div class="Quest-faq-icon-box">
-            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M17 8L21 12L17 16M7 16L3 12L7 8"></path>
+              <path d="M12 1V23"></path>
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
           </div>
           <div class="Quest-faq-content">
             <p class="Quest-faq-question">
               Q: How much time is required each week?
             </p>
             <p class="Quest-faq-answer">
-              45–60 minutes per week produces measurable progress. This is self
-              paced learning
+              45–60 minutes per week produces measurable progress. This is
+              self-paced learning.
             </p>
           </div>
         </div>
