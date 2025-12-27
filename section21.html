@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* Container styling */
+      .Quest-faq-container {
+        background-color: #ffffff;
+        border-radius: 24px;
+        padding: 40px;
+        max-width: 900px;
+        margin: 40px auto;
+        font-family: "Inter", sans-serif; /* Standard GHL font */
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Header section */
+      .Quest-faq-label {
+        color: #6fb2d2;
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .Quest-faq-title {
+        color: #1a2b4b;
+        font-size: 32px;
+        font-weight: 800;
+        margin-top: 8px;
+        margin-bottom: 30px;
+      }
+
+      /* FAQ Item Row */
+      .Quest-faq-item {
+        display: flex;
+        align-items: flex-start;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      /* Sidebar Icon Box */
+      .Quest-faq-icon-box {
+        background-color: #e3f2fd;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 60px;
+      }
+
+      .Quest-faq-icon-box svg {
+        width: 24px;
+        height: 24px;
+        color: #3e5a82;
+      }
+
+      /* Content Area */
+      .Quest-faq-content {
+        padding: 20px 25px;
+      }
+
+      .Quest-faq-question {
+        margin: 0 0 8px 0;
+        font-weight: 700;
+        font-size: 17px;
+        color: #1a2b4b;
+      }
+
+      .Quest-faq-answer {
+        margin: 0;
+        font-size: 15px;
+        color: #64748b;
+        line-height: 1.5;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 767px) {
+        .Quest-faq-container {
+          padding: 20px;
+          margin: 20px;
+        }
+        .Quest-faq-item {
+          flex-direction: row; /* Keeps icon to the left even on mobile */
+        }
+        .Quest-faq-icon-box {
+          padding: 15px;
+          min-width: 50px;
+        }
+        .Quest-faq-question {
+          font-size: 15px;
+        }
+        .Quest-faq-answer {
+          font-size: 13px;
+        }
+      }
+    </style>
+
+    <div class="Quest-faq-container">
+      <div class="Quest-faq-header">
+        <span class="Quest-faq-label">FAQ</span>
+        <h2 class="Quest-faq-title">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="Quest-faq-list">
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">Q: Who is KreditVerse for?</p>
+            <p class="Quest-faq-answer">
+              KreditVerse is designed for ages 10+ through adulthood: teens,
+              young adults, workers, job seekers, New Americans, educators, and
+              families.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+              <line x1="8" y1="21" x2="16" y2="21"></line>
+              <line x1="12" y1="17" x2="12" y2="21"></line>
+            </svg>
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">Q: Is this a VR game?</p>
+            <p class="Quest-faq-answer">
+              No. KreditVerse is a real-world simulation learning system, not
+              entertainment gaming.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              ></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">
+              Q: What does Department of Education-aligned mean?
+            </p>
+            <p class="Quest-faq-answer">
+              Our 12-module financial literacy system follows the Department of
+              Education standards used in public school curriculum frameworks.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">
+              Q: Is the program safe for learners?
+            </p>
+            <p class="Quest-faq-answer">
+              Yes. It is 100% FERPA & COPPA compliant, meeting strict student
+              data privacy standards.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">
+              Q: How much time is required each week?
+            </p>
+            <p class="Quest-faq-answer">
+              45–60 minutes per week produces measurable progress. This is self
+              paced learning
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">Q: Can adults use KreditVerse?</p>
+            <p class="Quest-faq-answer">
+              Absolutely. The system is universal and ideal for: adults
+              improving financial literacy, new Americans navigating U.S.
+              financial systems, job seekers, workers exploring new careers,
+              parents wanting personal development
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">
+              Q: Is the headset returned if we cancel?
+            </p>
+            <p class="Quest-faq-answer">
+              No. You keep the Meta Quest headset permanently.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">Q: Is this a refund guarantee?</p>
+            <p class="Quest-faq-answer">
+              No. It's better. Instead of dealing with returns or refund
+              processes, access is simply canceled — and you keep the device.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">Q: Why don't you accept returns?</p>
+            <p class="Quest-faq-answer">
+              Because VR headsets cannot be safely reused and systems are
+              custom-configured.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">Q: How does BNPL work?</p>
+            <p class="Quest-faq-answer">
+              Many families choose $83/month through Buy Now Pay Later partners.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">Q: Are Masterclasses included?</p>
+            <p class="Quest-faq-answer">
+              Yes. A full 12-month Next Generation Ready™ Masterclass series is
+              included at no cost.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">Q: Are replays available?</p>
+            <p class="Quest-faq-answer">
+              Yes. All Masterclasses are recorded and accessible.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">
+              Q: Do I need technical skills for setup?
+            </p>
+            <p class="Quest-faq-answer">No. Setup is guided step-by-step.</p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">
+              Q: Can multiple family members use the system?
+            </p>
+            <p class="Quest-faq-answer">
+              Yes. Multiple learners can use the same device.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">
+              Q: Is this a replacement for school?
+            </p>
+            <p class="Quest-faq-answer">
+              No — it's the missing piece. KreditVerse teaches the real-world
+              skills schools don't.
+            </p>
+          </div>
+        </div>
+
+        <div class="Quest-faq-item">
+          <div class="Quest-faq-icon-box">
+            <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+          </div>
+          <div class="Quest-faq-content">
+            <p class="Quest-faq-question">
+              Q: Is this appropriate for New American families?
+            </p>
+            <p class="Quest-faq-answer">
+              Yes. KreditVerse includes simulations, masterclasses, and guidance
+              specifically tailored to families learning U.S. financial and
+              career systems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
