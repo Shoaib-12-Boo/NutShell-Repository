@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      /* Container provides a isolated environment */
+      .realworld-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-color: #add7f6;
+        padding: 20px;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        box-sizing: border-box;
+      }
+
+      .realworld-container {
+        box-sizing: border-box;
+      }
+
+      .realworld-card {
+        display: flex;
+        background: #ffffff;
+        width: 100%;
+        max-width: 950px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Content Section Styling */
+      .realworld-main-content {
+        flex: 1.2;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+				text-align: left;
+      }
+
+      .realworld-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        color: #93c2e7;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .realworld-heading {
+        font-size: 50px;
+        line-height: 1.1;
+        color: #063E5F;
+        margin: 0 0 24px 0;
+        font-weight: 700;
+      }
+
+      .realworld-highlight {
+        color: #003057;
+      }
+
+      .realworld-skills-list {
+        font-size: 17px;
+        line-height: 1.6;
+        color: #1E2C3B;
+        font-weight: 700;
+        margin-bottom: 35px;
+        max-width: 420px;
+      }
+
+      .realworld-offer-details p {
+        margin: 12px 0 20px 0px;
+        font-size: 18px;
+        color: #1E2C3B;
+      }
+
+      .realworld-text-bold {
+        font-weight: 700;
+      }
+
+      .realworld-text-price strong {
+        font-weight: 700;
+      }
+
+      .realworld-text-urgency {
+        font-weight: 700;
+        margin-bottom: 30px !important;
+      }
+
+      /* Buttons */
+      .realworld-action-bar {
+        display: flex;
+        gap: 12px;
+      }
+
+      .realworld-button-primary,
+      .realworld-button-secondary {
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: none;
+        transition: opacity 0.2s;
+      }
+
+      .realworld-button-primary {
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+        color: #003057;
+      }
+
+      .realworld-button-secondary {
+        background-color: transparent;
+        color: #89c7f4;
+        border: 1px solid #89c7f4;
+      }
+
+      /* Visual Section & Responsive Curve */
+      .realworld-visual-section {
+        flex: 1;
+        position: relative;
+        min-height: 450px;
+      }
+
+      .realworld-feature-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .realworld-curve-divider {
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 120px;
+        height: 100%;
+        background: #ffffff;
+        clip-path: ellipse(65% 100% at 0% 50%);
+        z-index: 1;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 850px) {
+        .realworld-card {
+          flex-direction: column;
+        }
+
+        .realworld-main-content {
+          order: 2;
+          padding: 40px 30px;
+        }
+
+        .realworld-visual-section {
+          order: 1;
+          min-height: 300px;
+        }
+
+        .realworld-curve-divider {
+          width: 100%;
+          height: 80px;
+          top: auto;
+          bottom: -1px;
+          left: 0;
+          clip-path: ellipse(100% 65% at 50% 100%);
+        }
+
+        .realworld-heading {
+          font-size: 32px;
+        }
+      }
+    </style>
+
+    <div class="realworld-container">
+      <div class="realworld-card">
+        <div class="realworld-main-content">
+          <span class="realworld-label">FINAL CTA</span>
+          <h1 class="realworld-heading">
+            Prepare for the <br />
+            <span class="realworld-highlight">REAL WORLD —</span><br />
+            Not the Old One.
+          </h1>
+
+          <p class="realworld-skills-list">
+            Financial literacy. Life skills. Career pathways. STEM mastery. AI
+            readiness. Confidence. Real adult skills.
+          </p>
+
+          <div class="realworld-offer-details">
+            <p class="realworld-text-bold">
+              Join the Next Generation Ready™ Movement today.
+            </p>
+            <p class="realworld-text-price">
+              <strong>Start for only $83/month.</strong>
+            </p>
+            <p class="realworld-text-urgency">Only 100 pilot spots.</p>
+          </div>
+
+          <div class="realworld-action-bar">
+            <button class="realworld-button-primary">
+              <span>✍️</span> Enroll Now
+            </button>
+            <button class="realworld-button-secondary">
+              <span>👉</span> Watch the Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="realworld-visual-section">
+          <div class="realworld-curve-divider"></div>
+          <img
+            src="section24.avif"
+            alt="Group of students"
+            class="realworld-feature-image"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

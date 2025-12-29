@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KreditVersity Educational Streaming</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #87ceeb 0%, #b0d4e8 100%);
+        min-height: 100vh;
+        padding: 1.5rem;
+      }
+
+      .container-last {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Header-last Section with Background Image and Gradient */
+      .header-last {
+        position: relative;
+        height: 280px;
+        background: linear-gradient(
+          90deg,
+          rgba(135, 206, 235, 0.7) 0%,
+          rgba(100, 150, 200, 0.6) 40%,
+          rgba(150, 100, 180, 0.5) 70%,
+          rgba(255, 150, 120, 0.6) 100%
+        );
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      /* Background image simulation */
+      .header-last::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("section25-1.png");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.9;
+      }
+
+      /* Curved Wave Separator */
+      .header-last::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: white;
+        clip-path: polygon(
+          0 40%,
+          0% 100%,
+          100% 100%,
+          100% 40%,
+          95% 30%,
+          85% 25%,
+          70% 23%,
+          50% 25%,
+          30% 23%,
+          15% 25%,
+          5% 30%
+        );
+      }
+
+      .content-last {
+        padding: 0px 50px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Title Section */
+      .title-section-last {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .title-section-last h1 {
+        font-size: 33px;
+        font-weight: 700;
+        color: #2e3c4e;
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .title-section-last p {
+        font-size: 14px;
+        color: #384653;
+        line-height: 1.6;
+        text-align: left;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .title-section-last strong {
+        color: #384653;
+      }
+
+      /* Why This Matters Section */
+      .why-matters-last {
+        margin-bottom: 3rem;
+        display: flex;
+      }
+
+      .why-matters-text-last h2 {
+        font-size: 1.3rem;
+        color: #2e3c4e;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      .why-matters-text-last p {
+        font-size: 18px;
+        color: #2e3c4e;
+        text-align: left;
+        line-height: 1.7;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .why-matters-text-last {
+        width: 38%;
+        margin-left: 15px;
+        text-align: left;
+      }
+
+      .why-matters-images-last {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        width: 70%;
+      }
+
+      .why-matters-images-last img {
+        width: 50%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        height: 250px;
+      }
+
+      .why-matters-images-last img:nth-child(2) {
+        width: 50%;
+        /*margin-left: auto;*/
+        height: 130px;
+      }
+
+      /* What's Inside EDU+ Section */
+      .section-title-last {
+        font-size: 22px;
+        font-weight: 700;
+        color: #2e3c4e;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .section-icon-last {
+        font-size: 1.5rem;
+      }
+
+      .features-grid-last {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .feature-card-last {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .feature-icon-last {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f4f8;
+        border-radius: 0.5rem;
+      }
+
+      .feature-card-last h3 {
+        font-size: 18px;
+        color: #1a3a4a;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      .feature-card-last p {
+        font-size: 14px;
+        text-align: left;
+        color: #384653;
+        line-height: 1.6;
+      }
+
+      /* Game Changer Section */
+      .game-changer-last {
+        margin-bottom: 3rem;
+      }
+
+      .game-changer-grid-last {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .game-changer-item-last {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .game-changer-arrow-last {
+        font-size: 1.5rem;
+        color: #2E3C4E;
+        font-weight: bold;
+        flex-shrink: 0;
+        margin-top: 0.3rem;
+      }
+
+      .game-changer-content-last h3 {
+        font-size: 18px;
+        color: #2E3C4E;
+        font-weight: 700;
+      }
+
+      .game-changer-content-last p {
+        font-size: 14px;
+        color: #2E3C4E;
+        line-height: 1.6;
+      }
+
+      /* Why We Included This Section */
+      .included-section-last {
+        margin-bottom: 2rem;
+      }
+
+      .included-section-last h2 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #384653;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .included-section-last p {
+        font-size: 14px;
+        color: #384653;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+
+      .highlight-last {
+        font-weight: 700;
+        color: #1a3a4a;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .title-section-last-last h1 {
+          font-size: 1.4rem;
+        }
+
+        .why-matters-last {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          flex-direction: column;
+        }
+        .why-matters-text-last {
+          width: 100%;
+        }
+        .why-matters-images-last {
+          width: 100%;
+        }
+        .why-matters-images-last {
+          flex-direction: column;
+        }
+        .why-matters-images-last img {
+          width: 100%;
+        }
+
+        .why-matters-images-last img:nth-child(2) {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        .features-grid-last {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .game-changer-grid-last {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .header-last {
+          height: 200px;
+        }
+      }
+
+      @media (max-width: 480px) {
+
+        .container-last {
+          border-radius: 1rem;
+        }
+
+        .title-section-last h1 {
+          font-size: 1.2rem;
+        }
+
+        .content-last {
+          padding: 5px 1rem;
+        }
+
+        .header-last {
+          height: 150px;
+        }
+
+        .header-last-last::after {
+          height: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-last">
+      <!-- Header-last with curved wave separator -->
+      <div class="header-last"></div>
+
+      <!-- Main Content -->
+      <div class="content-last">
+        <!-- Title Section -->
+        <div class="title-section-last">
+          <h1>
+            KreditVersity Educational Streaming: Thousands of Hours of Learning
+            for Free
+          </h1>
+          <p>
+            Turn every KV headset into a 24/7 personal learning hub.
+            <strong>Your purchase now includes KreditVerse EDU+</strong>, our
+            new streaming service featuring
+            <strong
+              >thousands of hours of premium educational content — free with
+              ads.</strong
+            >
+          </p>
+        </div>
+
+        <!-- Why This Matters Section -->
+        <div class="why-matters-last">
+          <div class="why-matters-text-last">
+            <h2>Why This Matters:</h2>
+            <p>
+              Most families buy a headset for games or fun... but KV now brings
+              into the home with the hottest, high-demand educational topics,
+              all included at no extra cost.
+            </p>
+          </div>
+          <div class="why-matters-images-last">
+            <img src="section25-2.png" alt="Students learning together" />
+            <img src="section25-3.png" alt="Person using VR headset" />
+          </div>
+        </div>
+
+        <!-- What's Inside EDU+ Section -->
+        <div class="section-width-last">
+          <h2 class="section-title-last">
+            <span class="section-icon-last">🔥</span>
+            What's Inside EDU+
+          </h2>
+          <div class="features-grid-last">
+            <div class="feature-card-last">
+              <div class="feature-icon-last">💳</div>
+              <h3>Financial Mastery</h3>
+              <p>Credit, budgeting, money management, entrepreneurship.</p>
+            </div>
+            <div class="feature-card-last">
+              <div class="feature-icon-last">🔬</div>
+              <h3>STEM & Future Careers</h3>
+              <p>Coding, engineering, robotics, AI fundamentals.</p>
+            </div>
+            <div class="feature-card-last">
+              <div class="feature-icon-last">🎓</div>
+              <h3>Life Skills Library</h3>
+              <p>Communication, leadership, professional development.</p>
+            </div>
+            <div class="feature-card-last">
+              <div class="feature-icon-last">⚖️</div>
+              <h3>Wellness & Mental Fitness</h3>
+              <p>Stress relief, personal growth, mindfulness.</p>
+            </div>
+            <div class="feature-card-last">
+              <div class="feature-icon-last">👨‍👩‍👧</div>
+              <h3>Parent & Teen Essentials</h3>
+              <p>Relationship building, career planning.</p>
+            </div>
+            <div class="feature-card-last">
+              <div class="feature-icon-last">🌍</div>
+              <h3>History, Science, Culture & Entertainment</h3>
+              <p>
+                Hundreds of engaging documentaries optimized for daily,
+                high-engagement viewing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why This is a Game-Changer Section -->
+        <div class="game-changer-last">
+          <h2 class="section-title-last">
+            <span class="section-icon-last">🚀</span>
+            Why This is a Game-Changer
+          </h2>
+          <div class="game-changer-grid-last">
+            <div class="game-changer-item-last">
+              <div class="game-changer-arrow-last">→</div>
+              <div class="game-changer-content-last">
+                <h3>Extends Headset Usage</h3>
+                <p>Beyond gaming — learning, more value.</p>
+              </div>
+            </div>
+            <div class="game-changer-item-last">
+              <div class="game-changer-arrow-last">→</div>
+              <div class="game-changer-content-last">
+                <h3>Daily Engagement</h3>
+                <p>
+                  Gives families a reason to use the headset every day, not just
+                  once a week.
+                </p>
+              </div>
+            </div>
+            <div class="game-changer-item-last">
+              <div class="game-changer-arrow-last">→</div>
+              <div class="game-changer-content-last">
+                <h3>Complete Ecosystem</h3>
+                <p>
+                  Transforms KV into a complete education + entertainment
+                  platform.
+                </p>
+              </div>
+            </div>
+            <div class="game-changer-item-last">
+              <div class="game-changer-arrow-last">→</div>
+              <div class="game-changer-content-last">
+                <h3>Must-Have Selling Point</h3>
+                <p>For TikTok affiliates: "Buy once. Learn for life."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Why We Included This Section -->
+        <div class="included-section-last">
+          <h2>
+            <span class="section-icon-last">⭐</span>
+            Why We Included This
+          </h2>
+          <p>
+            Schools don't teach most of this. Parents don't have time to teach
+            all of this.
+          </p>
+          <p>
+            With KV EDU+, every family gets
+            <span class="highlight-last"
+              >the world's most powerful learning library</span
+            >, on-demand, immersive, and <strong>free with ads</strong> — making
+            the KV headset the
+            <span class="highlight-last"
+              >highest-value education product available at home.</span
+            >
+          </p>
+          <p>This is no longer just a VR headset.</p>
+          <p>
+            <strong
+              >It's an entire universe of learning — included in your $1,999
+              purchase.</strong
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

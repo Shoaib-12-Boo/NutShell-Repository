@@ -123,6 +123,60 @@
         background: #d1d5db;
       }
 
+      @media (max-width: 768px) {
+        .kv-wrapper {
+          padding: 50px 15px;
+          gap: 40px;
+        }
+
+        .kv-card {
+          padding: 25px 20px;
+          border-radius: 18px;
+          box-shadow: 3px 1px 0px 6px #6fb1e3;
+        }
+
+        .kv-title {
+          font-size: 28px;
+          line-height: 1.3;
+          text-align: center;
+        }
+
+        .kv-description,
+        .kv-tags,
+        .kv-highlight,
+        .kv-mission,
+        .kv-offer {
+          font-size: 16px;
+          text-align: left;
+        }
+
+        .kv-buttons {
+          justify-content: center;
+          gap: 8px;
+        }
+
+        .kv-btn {
+          width: 100%;
+          text-align: center;
+          padding: 12px;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .kv-title {
+          font-size: 24px;
+        }
+
+        .kv-description,
+        .kv-tags,
+        .kv-highlight,
+        .kv-mission,
+        .kv-offer {
+          font-size: 15px;
+        }
+      }
+
       /* section 2 css */
 
       .rwrg-card {
@@ -213,21 +267,58 @@
         margin-bottom: 12px;
       }
 
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         .rwrg-card {
-          padding: 30px 24px;
+          padding: 32px 28px;
+          border-radius: 18px;
+          box-shadow: 3px 1px 0px 6px #6fb1e3;
         }
 
         .rwrg-title {
-          font-size: 24px;
+          font-size: 28px;
+          line-height: 1.3;
+          text-align: left;
+        }
+
+        .rwrg-intro,
+        .rwrg-description,
+        .rwrg-subheading,
+        .rwrg-highlight {
+          text-align: left;
         }
 
         .rwrg-lists {
+          flex-direction: column;
           gap: 20px;
         }
 
         .rwrg-list {
           width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .rwrg-card {
+          padding: 24px 20px;
+        }
+
+        .rwrg-label {
+          font-size: 12px;
+        }
+
+        .rwrg-title {
+          font-size: 22px;
+        }
+
+        .rwrg-intro,
+        .rwrg-list li,
+        .rwrg-requirements li,
+        .rwrg-description {
+          font-size: 14px;
+        }
+
+        .rwrg-highlight {
+          font-size: 16px;
         }
       }
 
@@ -373,6 +464,87 @@
         border-radius: 15px;
       }
 
+      @media (max-width: 768px) {
+        .sim-edu-card {
+          padding: 32px 26px;
+          border-radius: 28px;
+          box-shadow: 3px 1px 0px 6px #6fb1e3;
+        }
+
+        .sim-edu-title {
+          font-size: 28px;
+        }
+
+        .sim-edu-subtitle {
+          font-size: 22px;
+          margin-bottom: 25px;
+        }
+
+        .sim-edu-content {
+          flex-direction: column;
+          gap: 25px;
+        }
+
+        .sim-edu-text,
+        .sim-edu-retention {
+          width: 100%;
+          text-align: left;
+        }
+
+        .sim-edu-highlight,
+        .sim-edu-desc,
+        .sim-edu-list,
+        .sim-edu-retention {
+          font-size: 16px;
+        }
+
+        .sim-edu-list li {
+          margin-bottom: 20px;
+        }
+
+        .sim-edu-image {
+          order: -1;
+        }
+
+        .sim-edu-bottom {
+          text-align: left;
+        }
+
+        .sim-edu-boxes {
+          gap: 15px;
+        }
+
+        .sim-edu-boxes ul {
+          width: 100%;
+        }
+
+        .sim-edu-note,
+        .sim-edu-btn {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .sim-edu-card {
+          padding: 24px 20px;
+          border-radius: 22px;
+        }
+
+        .sim-edu-title {
+          font-size: 24px;
+        }
+
+        .sim-edu-subtitle {
+          font-size: 20px;
+        }
+
+        .sim-edu-prefooter,
+        .sim-edu-footer {
+          font-size: 13px;
+          line-height: 1.6;
+        }
+      }
+
       /* section 4 css */
       /* Card */
       .sho-demo-card {
@@ -485,23 +657,75 @@
         /* disables the inward white curve */
       }
 
-      /* Responsive */
-      @media (max-width: 991px) {
+      @media (max-width: 768px) {
         .sho-demo-card {
           flex-direction: column;
+          padding: 20px 15px;
+          border-radius: 20px;
+          box-shadow: 3px 1px 0px 6px #6fb1e3;
         }
 
-        .sho-demo-content,
-        .sho-demo-image {
+        .sho-demo-content {
           width: 100%;
-        }
-
-        .sho-demo-image::before {
-          display: none;
+          padding: 25px 20px;
+          text-align: left;
         }
 
         .sho-demo-title {
-          font-size: 28px;
+          font-size: 26px;
+          line-height: 1.3;
+        }
+
+        .sho-demo-description {
+          font-size: 16px;
+        }
+
+        .sho-demo-list li {
+          font-size: 14px;
+        }
+
+        .sho-demo-buttons {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .sho-btn-primary,
+        .sho-btn-secondary {
+          width: 100%;
+          text-align: center;
+          padding: 12px;
+          font-size: 14px;
+        }
+
+        .sho-demo-image {
+          width: 100%;
+          margin-top: 20px;
+          border-radius: 20px;
+          overflow: hidden;
+        }
+
+        .sho-demo-image img {
+          border-radius: 20px;
+          height: auto;
+          object-fit: cover;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .sho-demo-title {
+          font-size: 22px;
+        }
+
+        .sho-demo-description {
+          font-size: 15px;
+        }
+
+        .sho-demo-list li {
+          font-size: 13px;
+        }
+
+        .sho-demo-buttons {
+          gap: 10px;
         }
       }
 
@@ -637,14 +861,100 @@
         border-radius: 12px;
       }
 
-      /* Responsive */
+      /* Kreditverse Section Responsive */
+      @media (max-width: 992px) {
+        .kreditverse-wrapper {
+          padding: 30px 20px;
+          border-radius: 20px;
+        }
+
+        .kreditverse-section-title {
+          font-size: 36px;
+          line-height: 1.2;
+        }
+
+        .kreditverse-section-tag {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .kreditverse-wrapper {
+          padding: 25px 15px;
+        }
+
+        .kreditverse-section-title {
+          font-size: 28px;
+        }
+
+        .kreditverse-section-tag {
+          font-size: 14px;
+        }
+
+        .kreditverse-image-container img {
+          height: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .kreditverse-section-title {
+          font-size: 24px;
+        }
+
+        .kreditverse-section-tag {
+          font-size: 13px;
+        }
+      }
+
+      /* Sho Financial Section Responsive */
+      @media (max-width: 992px) {
+        .sho-financial-card {
+          padding: 25px 20px;
+          border-radius: 20px;
+        }
+
+        .sho-financial-title {
+          font-size: 32px;
+        }
+
+        .sho-financial-subtitle,
+        .sho-financial-description,
+        .sho-financial-note {
+          font-size: 14px;
+        }
+      }
+
       @media (max-width: 768px) {
         .sho-training-boxes {
           flex-direction: column;
+          gap: 12px;
         }
 
         .sho-training-list {
           max-width: 100%;
+        }
+
+        .sho-financial-image-wrapper,
+        .sho-financial-image {
+          width: 100%;
+          border-radius: 12px;
+          height: auto;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .sho-financial-title {
+          font-size: 28px;
+        }
+
+        .sho-financial-subtitle,
+        .sho-financial-description,
+        .sho-financial-note {
+          font-size: 13px;
+        }
+
+        .sho-training-list li {
+          font-size: 13px;
         }
       }
 
@@ -871,20 +1181,92 @@
         object-fit: cover;
       }
 
-      /* Mobile Responsiveness */
-      @media (max-width: 768px) {
+      /* Tablet */
+      @media (max-width: 992px) {
+        .ghl-labs-container {
+          padding: 30px 20px;
+          border-radius: 20px;
+        }
+
+        .ghl-labs-title {
+          font-size: 24px;
+        }
+
+        .ghl-labs-subtitle {
+          font-size: 16px;
+        }
+
         .ghl-labs-grid {
           grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+
+        .ghl-lab-card {
+          padding: 12px;
+        }
+
+        .ghl-lab-name {
+          font-size: 16px;
+        }
+
+        .ghl-icon-box {
+          width: 26px;
+          height: 26px;
         }
       }
 
-      @media (max-width: 480px) {
+      /* Mobile */
+      @media (max-width: 768px) {
         .ghl-labs-grid {
           grid-template-columns: 1fr;
+          gap: 12px;
         }
 
         .ghl-labs-container {
-          padding: 20px;
+          padding: 25px 15px;
+        }
+
+        .ghl-labs-title {
+          font-size: 22px;
+          text-align: center;
+        }
+
+        .ghl-labs-subtitle {
+          font-size: 15px;
+          text-align: center;
+        }
+
+        .ghl-lab-card {
+          width: 100%;
+          padding: 12px;
+        }
+
+        .ghl-labs-image-wrapper {
+          margin-top: 15px;
+        }
+      }
+
+      /* Extra Small Mobile */
+      @media (max-width: 480px) {
+        .ghl-labs-container {
+          padding: 20px 12px;
+        }
+
+        .ghl-labs-title {
+          font-size: 20px;
+        }
+
+        .ghl-labs-subtitle {
+          font-size: 14px;
+        }
+
+        .ghl-lab-name {
+          font-size: 14px;
+        }
+
+        .ghl-icon-box {
+          width: 22px;
+          height: 22px;
         }
       }
 
@@ -2649,6 +3031,836 @@
           font-size: 10px;
         }
       }
+
+      /* section 21 css */
+      /* Container styling */
+      .Quest-faq-container {
+        background-color: #ffffff;
+        border-radius: 24px;
+        padding: 40px;
+        max-width: 900px;
+        margin: 40px auto;
+        font-family: "Inter", sans-serif; /* Standard GHL font */
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Header section */
+      .Quest-faq-label {
+        color: #6fb2d2;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .Quest-faq-title {
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
+        margin-top: 8px;
+        margin-bottom: 30px;
+      }
+
+      .Quest-faq-header {
+        text-align: left;
+      }
+
+      /* FAQ Item Row */
+      .Quest-faq-item {
+        display: flex;
+        align-items: flex-start;
+        border: 1.5px solid #e2e8f0;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        overflow: hidden;
+        transition: transform 0.2s ease;
+      }
+
+      /* Sidebar Icon Box */
+      .Quest-faq-icon-box {
+        background-color: #cfeafc;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 30px;
+        width: 100%;
+        height: -webkit-fill-available;
+      }
+
+      .Quest-faq-icon-box svg {
+        width: 24px;
+        height: 24px;
+        color: #3e5a82;
+      }
+
+      /* Content Area */
+      .Quest-faq-content {
+        padding: 15px 20px;
+      }
+
+      .Quest-faq-question {
+        margin: 0 0 8px 0;
+        text-align: left;
+        font-weight: 700;
+        font-size: 18px;
+        color: #384653;
+      }
+
+      .Quest-faq-answer {
+        margin: 0;
+        font-size: 14px;
+        text-align: left;
+        color: #384653;
+        line-height: 1.5;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 767px) {
+        .Quest-faq-container {
+          padding: 20px;
+          margin: 20px;
+        }
+        .Quest-faq-item {
+          flex-direction: row; /* Keeps icon to the left even on mobile */
+        }
+        .Quest-faq-icon-box {
+          padding: 15px;
+          min-width: 50px;
+        }
+        .Quest-faq-question {
+          font-size: 15px;
+        }
+        .Quest-faq-answer {
+          font-size: 13px;
+        }
+      }
+
+      /* section 22 css */
+
+      .zasd-popup-container {
+        background: white;
+        width: 100%;
+        max-width: 900px;
+        border-radius: 24px;
+        padding: 40px 40px;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+        box-sizing: border-box;
+      }
+
+      /* Typography */
+      .zasd-tagline {
+        color: #75bae6;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-align: left;
+      }
+
+      .zasd-main-title {
+        color: #2e3c4e;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0 0 15px 0;
+        text-align: center;
+      }
+
+      .zasd-hero-text {
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: left;
+        margin: 0 0 30px 0;
+      }
+
+      .zasd-text-blue {
+        color: #2589c9;
+      }
+
+      /* Grid Layout */
+      .zasd-features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px 40px;
+        margin-bottom: 40px;
+      }
+
+      .zasd-feature-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #384653;
+        font-size: 18px;
+        text-align: left;
+      }
+
+      .zasd-form {
+        text-align: left;
+      }
+
+      .zasd-arrow {
+        color: #777;
+        font-size: 25px;
+      }
+
+      .zasd-check {
+        font-weight: bold;
+      }
+
+      /* Form Elements */
+      .zasd-input-wrapper {
+        position: relative;
+        margin-bottom: 15px;
+      }
+
+      .zasd-mail-icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #555;
+      }
+
+      .zasd-input {
+        width: 100%;
+        padding: 18px 18px 18px 45px;
+        background-color: #cfeafc;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        color: #444;
+        box-sizing: border-box;
+      }
+
+      .zasd-input::placeholder {
+        color: #333;
+        font-weight: 600;
+      }
+
+      .zasd-submit-btn {
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        color: #384653;
+        font-weight: 700;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.1s ease;
+      }
+
+      .zasd-submit-btn:active {
+        transform: translateY(2px);
+      }
+
+      .zasd-footer {
+        margin-top: 25px;
+        font-size: 12px;
+        text-align: left;
+        color: #384653;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 768px) {
+        .zasd-popup-container {
+          padding: 30px 20px;
+          text-align: center;
+        }
+
+        .zasd-hero-text {
+          font-size: 24px;
+        }
+
+        .zasd-features-grid {
+          grid-template-columns: 1fr;
+          text-align: left;
+        }
+
+        .zasd-main-title {
+          font-size: 22px;
+        }
+      }
+
+      /* section 23 css */
+      /* Container & Background */
+      .cost-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 20px auto;
+        border-radius: 24px;
+        overflow: hidden;
+        position: relative;
+        /* Placeholder background image - replace with your actual image URL */
+        background: url("https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/s2b/eje/ncp/section23.avif")
+          no-repeat center center;
+        background-size: cover;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Dark Overlay for text readability */
+      .cost-overlay {
+        background: linear-gradient(
+          rgba(58, 56, 59, 0.2),
+          rgba(54, 53, 63, 0.2)
+        );
+        padding: 30px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+      }
+
+      .cost-content {
+        text-align: center;
+        max-width: 900px;
+        width: 100%;
+      }
+
+      .cost-title {
+        color: #ffffff;
+        font-size: clamp(24px, 5vw, 42px);
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .cost-subtitle {
+        color: #ffffff;
+        font-size: 36px;
+        font-weight: 700;
+        margin: 5px 0 30px 0;
+        opacity: 0.9;
+      }
+
+      /* Grid Layout for Cards */
+      .cost-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        margin-bottom: 40px;
+      }
+
+      /* Card Styling (Glassmorphism) */
+      .cost-card {
+        background: rgba(255, 255, 255, 0.95);
+        color: #384653; /* Dark navy blue */
+        padding: 15px 15px;
+        border-radius: 12px;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: left;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        transition: transform 0.2s ease;
+      }
+
+      .cost-footer {
+        color: #ffffff;
+        font-size: 20px;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 600px) {
+        .cost-overlay {
+          padding: 40px 15px;
+        }
+        .cost-grid {
+          grid-template-columns: 1fr;
+        }
+        .cost-card {
+          font-size: 16px;
+          padding: 18px;
+        }
+      }
+
+      /* section 24 css */
+      .realworld-card {
+        display: flex;
+        background: #ffffff;
+        width: 100%;
+        max-width: 950px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Content Section Styling */
+      .realworld-main-content {
+        flex: 1.2;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      .realworld-label {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+        color: #93c2e7;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .realworld-heading {
+        font-size: 50px;
+        line-height: 1.1;
+        color: #063e5f;
+        margin: 0 0 24px 0;
+        font-weight: 700;
+      }
+
+      .realworld-highlight {
+        color: #003057;
+      }
+
+      .realworld-skills-list {
+        font-size: 17px;
+        line-height: 1.6;
+        color: #1e2c3b;
+        font-weight: 700;
+        margin-bottom: 35px;
+        max-width: 420px;
+      }
+
+      .realworld-offer-details p {
+        margin: 12px 0 20px 0px;
+        font-size: 18px;
+        color: #1e2c3b;
+      }
+
+      .realworld-text-bold {
+        font-weight: 700;
+      }
+
+      .realworld-text-price strong {
+        font-weight: 700;
+      }
+
+      .realworld-text-urgency {
+        font-weight: 700;
+        margin-bottom: 30px !important;
+      }
+
+      /* Buttons */
+      .realworld-action-bar {
+        display: flex;
+        gap: 12px;
+      }
+
+      .realworld-button-primary,
+      .realworld-button-secondary {
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: none;
+        transition: opacity 0.2s;
+      }
+
+      .realworld-button-primary {
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+        color: #003057;
+      }
+
+      .realworld-button-secondary {
+        background-color: transparent;
+        color: #89c7f4;
+        border: 1px solid #89c7f4;
+      }
+
+      /* Visual Section & Responsive Curve */
+      .realworld-visual-section {
+        flex: 1;
+        position: relative;
+        min-height: 450px;
+      }
+
+      .realworld-feature-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .realworld-curve-divider {
+        position: absolute;
+        top: 0;
+        left: -1px;
+        width: 120px;
+        height: 100%;
+        background: #ffffff;
+        clip-path: ellipse(65% 100% at 0% 50%);
+        z-index: 1;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 850px) {
+        .realworld-card {
+          flex-direction: column;
+        }
+
+        .realworld-main-content {
+          order: 2;
+          padding: 40px 30px;
+        }
+
+        .realworld-visual-section {
+          order: 1;
+          min-height: 300px;
+        }
+
+        .realworld-curve-divider {
+          width: 100%;
+          height: 80px;
+          top: auto;
+          bottom: -1px;
+          left: 0;
+          clip-path: ellipse(100% 65% at 50% 100%);
+        }
+
+        .realworld-heading {
+          font-size: 32px;
+        }
+      }
+
+      /* section25 css */
+      .container-last {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* Header-last Section with Background Image and Gradient */
+      .header-last {
+        position: relative;
+        height: 280px;
+        background: linear-gradient(
+          90deg,
+          rgba(135, 206, 235, 0.7) 0%,
+          rgba(100, 150, 200, 0.6) 40%,
+          rgba(150, 100, 180, 0.5) 70%,
+          rgba(255, 150, 120, 0.6) 100%
+        );
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+
+      /* Background image simulation */
+      .header-last::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/5bv/4j9/v1m/section25-1.png");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.9;
+      }
+
+      /* Curved Wave Separator */
+      .header-last::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background: white;
+        clip-path: polygon(
+          0 40%,
+          0% 100%,
+          100% 100%,
+          100% 40%,
+          95% 30%,
+          85% 25%,
+          70% 23%,
+          50% 25%,
+          30% 23%,
+          15% 25%,
+          5% 30%
+        );
+      }
+
+      .content-last {
+        padding: 0px 50px;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Title Section */
+      .title-section-last {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .title-section-last h1 {
+        font-size: 33px;
+        font-weight: 700;
+        color: #2e3c4e;
+        line-height: 1.3;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .title-section-last p {
+        font-size: 14px;
+        color: #384653;
+        line-height: 1.6;
+        text-align: left;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .title-section-last strong {
+        color: #384653;
+      }
+
+      /* Why This Matters Section */
+      .why-matters-last {
+        margin-bottom: 3rem;
+        display: flex;
+      }
+
+      .why-matters-text-last h2 {
+        font-size: 1.3rem;
+        color: #2e3c4e;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      .why-matters-text-last p {
+        font-size: 18px;
+        color: #2e3c4e;
+        text-align: left;
+        line-height: 1.7;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .why-matters-text-last {
+        width: 38%;
+        margin-left: 15px;
+        text-align: left;
+      }
+
+      .why-matters-images-last {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        width: 70%;
+      }
+
+      .why-matters-images-last img {
+        width: 50%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        height: 250px;
+      }
+
+      .why-matters-images-last img:nth-child(2) {
+        width: 50%;
+        /*margin-left: auto;*/
+        height: 130px;
+      }
+
+      /* What's Inside EDU+ Section */
+      .section-title-last {
+        font-size: 22px;
+        font-weight: 700;
+        color: #2e3c4e;
+        margin-bottom: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .section-icon-last {
+        font-size: 1.5rem;
+      }
+
+      .features-grid-last {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .feature-card-last {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .feature-icon-last {
+        font-size: 2rem;
+        margin-bottom: 0.8rem;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0f4f8;
+        border-radius: 0.5rem;
+      }
+
+      .feature-card-last h3 {
+        font-size: 18px;
+        color: #1a3a4a;
+        font-weight: 700;
+        text-align: left;
+      }
+
+      .feature-card-last p {
+        font-size: 14px;
+        text-align: left;
+        color: #384653;
+        line-height: 1.6;
+      }
+
+      /* Game Changer Section */
+      .game-changer-last {
+        margin-bottom: 3rem;
+      }
+
+      .game-changer-grid-last {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .game-changer-item-last {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .game-changer-arrow-last {
+        font-size: 1.5rem;
+        color: #2e3c4e;
+        font-weight: bold;
+        flex-shrink: 0;
+        margin-top: 0.3rem;
+      }
+
+      .game-changer-content-last h3 {
+        font-size: 18px;
+        text-align: left;
+        color: #2e3c4e;
+        font-weight: 700;
+      }
+
+      .game-changer-content-last p {
+        font-size: 14px;
+        color: #2e3c4e;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      /* Why We Included This Section */
+      .included-section-last {
+        margin-bottom: 2rem;
+      }
+
+      .included-section-last h2 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #384653;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .included-section-last p {
+        font-size: 14px;
+        color: #384653;
+        text-align: left;
+        line-height: 1.7;
+        margin-bottom: 1rem;
+      }
+
+      .highlight-last {
+        font-weight: 700;
+        color: #1a3a4a;
+        text-align: left;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        .title-section-last-last h1 {
+          font-size: 1.4rem;
+        }
+
+        .why-matters-last {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          flex-direction: column;
+        }
+        .why-matters-text-last {
+          width: 100%;
+        }
+        .why-matters-images-last {
+          width: 100%;
+        }
+        .why-matters-images-last {
+          flex-direction: column;
+        }
+        .why-matters-images-last img {
+          width: 100%;
+        }
+
+        .why-matters-images-last img:nth-child(2) {
+          width: 100%;
+          margin-left: 0;
+        }
+
+        .features-grid-last {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .game-changer-grid-last {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+        }
+
+        .header-last {
+          height: 200px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .container-last {
+          border-radius: 1rem;
+        }
+
+        .title-section-last h1 {
+          font-size: 1.2rem;
+        }
+
+        .content-last {
+          padding: 5px 1rem;
+        }
+
+        .header-last {
+          height: 150px;
+        }
+
+        .header-last-last::after {
+          height: 60px;
+        }
+      }
     </style>
 
     <!-- section1 html -->
@@ -3736,6 +4948,599 @@
               class="bh2-image"
               id="bh2-main-image"
             />
+          </div>
+        </div>
+      </div>
+
+      <!-- section 21 html -->
+      <div class="Quest-faq-container">
+        <div class="Quest-faq-header">
+          <span class="Quest-faq-label">FAQ</span>
+          <h2 class="Quest-faq-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="Quest-faq-list">
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">Q: Who is KreditVerse for?</p>
+              <p class="Quest-faq-answer">
+                KreditVerse is designed for ages 10+ through adulthood: teens,
+                young adults, workers, job seekers, New Americans, educators,
+                and families.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">Q: Is this a VR game?</p>
+              <p class="Quest-faq-answer">
+                No. KreditVerse is a real-world simulation learning system, not
+                entertainment gaming.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">
+                Q: What does Department of Education-aligned mean?
+              </p>
+              <p class="Quest-faq-answer">
+                Our 12-module financial literacy system follows the Department
+                of Education standards used in public school curriculum
+                frameworks.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">
+                Q: Is the program safe for learners?
+              </p>
+              <p class="Quest-faq-answer">
+                Yes. It is 100% FERPA & COPPA compliant, meeting strict student
+                data privacy standards.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M17 8L21 12L17 16M7 16L3 12L7 8"></path>
+                <path d="M12 1V23"></path>
+                <path
+                  d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">
+                Q: How much time is required each week?
+              </p>
+              <p class="Quest-faq-answer">
+                45–60 minutes per week produces measurable progress. This is
+                self-paced learning.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">Q: Can adults use KreditVerse?</p>
+              <p class="Quest-faq-answer">
+                Absolutely. The system is universal and ideal for: adults
+                improving financial literacy, new Americans navigating U.S.
+                financial systems, job seekers, workers exploring new careers,
+                parents wanting personal development
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">
+                Q: Is the headset returned if we cancel?
+              </p>
+              <p class="Quest-faq-answer">
+                No. You keep the Meta Quest headset permanently.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">Q: Is this a refund guarantee?</p>
+              <p class="Quest-faq-answer">
+                No. It's better. Instead of dealing with returns or refund
+                processes, access is simply canceled — and you keep the device.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">Q: Why don't you accept returns?</p>
+              <p class="Quest-faq-answer">
+                Because VR headsets cannot be safely reused and systems are
+                custom-configured.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">Q: How does BNPL work?</p>
+              <p class="Quest-faq-answer">
+                Many families choose $83/month through Buy Now Pay Later
+                partners.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">Q: Are Masterclasses included?</p>
+              <p class="Quest-faq-answer">
+                Yes. A full 12-month Next Generation Ready™ Masterclass series
+                is included at no cost.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">Q: Are replays available?</p>
+              <p class="Quest-faq-answer">
+                Yes. All Masterclasses are recorded and accessible.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">
+                Q: Do I need technical skills for setup?
+              </p>
+              <p class="Quest-faq-answer">No. Setup is guided step-by-step.</p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">
+                Q: Can multiple family members use the system?
+              </p>
+              <p class="Quest-faq-answer">
+                Yes. Multiple learners can use the same device.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">
+                Q: Is this a replacement for school?
+              </p>
+              <p class="Quest-faq-answer">
+                No — it's the missing piece. KreditVerse teaches the real-world
+                skills schools don't.
+              </p>
+            </div>
+          </div>
+
+          <div class="Quest-faq-item">
+            <div class="Quest-faq-icon-box">
+              <!-- <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg> -->
+            </div>
+            <div class="Quest-faq-content">
+              <p class="Quest-faq-question">
+                Q: Is this appropriate for New American families?
+              </p>
+              <p class="Quest-faq-answer">
+                Yes. KreditVerse includes simulations, masterclasses, and
+                guidance specifically tailored to families learning U.S.
+                financial and career systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section 22 html -->
+      <div class="zasd-popup-container">
+        <header class="zasd-header">
+          <p class="zasd-tagline">POPUP EMAIL CAPTURE (Exit Intent + Scroll)</p>
+          <h2 class="zasd-main-title">
+            Wait — Don't Leave Without Your Free Bundle!
+          </h2>
+          <h1 class="zasd-hero-text">
+            Get the
+            <span class="zasd-text-blue">Future-Ready Starter Bundle</span>
+            FREE:
+          </h1>
+        </header>
+
+        <div class="zasd-features-grid">
+          <div class="zasd-feature-item">
+            <span class="zasd-arrow">→</span>
+            <span class="zasd-check">✓</span>
+            <span class="zasd-feature-label">Life Skills Guide</span>
+          </div>
+          <div class="zasd-feature-item">
+            <span class="zasd-arrow">→</span>
+            <span class="zasd-check">✓</span>
+            <span class="zasd-feature-label">Masterclass Pass</span>
+          </div>
+          <div class="zasd-feature-item">
+            <span class="zasd-arrow">→</span>
+            <span class="zasd-check">✓</span>
+            <span class="zasd-feature-label">Simulation Sneak Peek</span>
+          </div>
+          <div class="zasd-feature-item">
+            <span class="zasd-arrow">→</span>
+            <span class="zasd-check">✓</span>
+            <span class="zasd-feature-label">Career Clarity Tool</span>
+          </div>
+        </div>
+
+        <form class="zasd-form">
+          <div class="zasd-input-wrapper">
+            <span class="zasd-mail-icon">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                ></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </span>
+            <input
+              type="email"
+              class="zasd-input"
+              placeholder="[ Email Field ]"
+              required
+            />
+          </div>
+          <button type="submit" class="zasd-submit-btn">
+            Unlock Free Bundle
+          </button>
+        </form>
+
+        <footer class="zasd-footer">
+          Triggers at: exit intent, 50% scroll, or 30 seconds idle.
+        </footer>
+      </div>
+
+      <!-- section 23 html -->
+      <div class="cost-container">
+        <div class="cost-overlay">
+          <div class="cost-content">
+            <h1 class="cost-title">COST OF DOING NOTHING</h1>
+            <h2 class="cost-subtitle">The Price of Waiting</h2>
+
+            <div class="cost-grid">
+              <div class="cost-card">Financial mistakes take years to fix.</div>
+              <div class="cost-card">Career confusion costs thousands.</div>
+              <div class="cost-card">
+                Lack of confidence blocks opportunities.
+              </div>
+              <div class="cost-card">
+                Missing life skills delays independence.
+              </div>
+            </div>
+
+            <p class="cost-footer">
+              <strong
+                >Preparing now is cheaper — and pays dividends for life.</strong
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- section 24 html -->
+      <div class="realworld-card">
+        <div class="realworld-main-content">
+          <span class="realworld-label">FINAL CTA</span>
+          <h1 class="realworld-heading">
+            Prepare for the <br />
+            <span class="realworld-highlight">REAL WORLD —</span><br />
+            Not the Old One.
+          </h1>
+
+          <p class="realworld-skills-list">
+            Financial literacy. Life skills. Career pathways. STEM mastery. AI
+            readiness. Confidence. Real adult skills.
+          </p>
+
+          <div class="realworld-offer-details">
+            <p class="realworld-text-bold">
+              Join the Next Generation Ready™ Movement today.
+            </p>
+            <p class="realworld-text-price">
+              <strong>Start for only $83/month.</strong>
+            </p>
+            <p class="realworld-text-urgency">Only 100 pilot spots.</p>
+          </div>
+
+          <div class="realworld-action-bar">
+            <button class="realworld-button-primary">
+              <span>✍️</span> Enroll Now
+            </button>
+            <button class="realworld-button-secondary">
+              <span>👉</span> Watch the Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="realworld-visual-section">
+          <div class="realworld-curve-divider"></div>
+          <img
+            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/eqe/wcp/qyd/section24.avif"
+            alt="Group of students"
+            class="realworld-feature-image"
+          />
+        </div>
+      </div>
+
+      <!-- section 25 html -->
+      <div class="container-last">
+        <!-- Header-last with curved wave separator -->
+        <div class="header-last"></div>
+
+        <!-- Main Content -->
+        <div class="content-last">
+          <!-- Title Section -->
+          <div class="title-section-last">
+            <h1>
+              KreditVersity Educational Streaming: Thousands of Hours of
+              Learning for Free
+            </h1>
+            <p>
+              Turn every KV headset into a 24/7 personal learning hub.
+              <strong>Your purchase now includes KreditVerse EDU+</strong>, our
+              new streaming service featuring
+              <strong
+                >thousands of hours of premium educational content — free with
+                ads.</strong
+              >
+            </p>
+          </div>
+
+          <!-- Why This Matters Section -->
+          <div class="why-matters-last">
+            <div class="why-matters-text-last">
+              <h2>Why This Matters:</h2>
+              <p>
+                Most families buy a headset for games or fun... but KV now
+                brings into the home with the hottest, high-demand educational
+                topics, all included at no extra cost.
+              </p>
+            </div>
+            <div class="why-matters-images-last">
+              <img
+                src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/y96/s3s/kt8/section25-2.png"
+                alt="Students learning together"
+              />
+              <img
+                src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/if9/xdx/0va/section25-3.png"
+                alt="Person using VR headset"
+              />
+            </div>
+          </div>
+
+          <!-- What's Inside EDU+ Section -->
+          <div class="section-width-last">
+            <h2 class="section-title-last">
+              <span class="section-icon-last">🔥</span>
+              What's Inside EDU+
+            </h2>
+            <div class="features-grid-last">
+              <div class="feature-card-last">
+                <div class="feature-icon-last">💳</div>
+                <h3>Financial Mastery</h3>
+                <p>Credit, budgeting, money management, entrepreneurship.</p>
+              </div>
+              <div class="feature-card-last">
+                <div class="feature-icon-last">🔬</div>
+                <h3>STEM & Future Careers</h3>
+                <p>Coding, engineering, robotics, AI fundamentals.</p>
+              </div>
+              <div class="feature-card-last">
+                <div class="feature-icon-last">🎓</div>
+                <h3>Life Skills Library</h3>
+                <p>Communication, leadership, professional development.</p>
+              </div>
+              <div class="feature-card-last">
+                <div class="feature-icon-last">⚖️</div>
+                <h3>Wellness & Mental Fitness</h3>
+                <p>Stress relief, personal growth, mindfulness.</p>
+              </div>
+              <div class="feature-card-last">
+                <div class="feature-icon-last">👨‍👩‍👧</div>
+                <h3>Parent & Teen Essentials</h3>
+                <p>Relationship building, career planning.</p>
+              </div>
+              <div class="feature-card-last">
+                <div class="feature-icon-last">🌍</div>
+                <h3>History, Science, Culture & Entertainment</h3>
+                <p>
+                  Hundreds of engaging documentaries optimized for daily,
+                  high-engagement viewing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why This is a Game-Changer Section -->
+          <div class="game-changer-last">
+            <h2 class="section-title-last">
+              <span class="section-icon-last">🚀</span>
+              Why This is a Game-Changer
+            </h2>
+            <div class="game-changer-grid-last">
+              <div class="game-changer-item-last">
+                <div class="game-changer-arrow-last">→</div>
+                <div class="game-changer-content-last">
+                  <h3>Extends Headset Usage</h3>
+                  <p>Beyond gaming — learning, more value.</p>
+                </div>
+              </div>
+              <div class="game-changer-item-last">
+                <div class="game-changer-arrow-last">→</div>
+                <div class="game-changer-content-last">
+                  <h3>Daily Engagement</h3>
+                  <p>
+                    Gives families a reason to use the headset every day, not
+                    just once a week.
+                  </p>
+                </div>
+              </div>
+              <div class="game-changer-item-last">
+                <div class="game-changer-arrow-last">→</div>
+                <div class="game-changer-content-last">
+                  <h3>Complete Ecosystem</h3>
+                  <p>
+                    Transforms KV into a complete education + entertainment
+                    platform.
+                  </p>
+                </div>
+              </div>
+              <div class="game-changer-item-last">
+                <div class="game-changer-arrow-last">→</div>
+                <div class="game-changer-content-last">
+                  <h3>Must-Have Selling Point</h3>
+                  <p>For TikTok affiliates: "Buy once. Learn for life."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Why We Included This Section -->
+          <div class="included-section-last">
+            <h2>
+              <span class="section-icon-last">⭐</span>
+              Why We Included This
+            </h2>
+            <p>
+              Schools don't teach most of this. Parents don't have time to teach
+              all of this.
+            </p>
+            <p>
+              With KV EDU+, every family gets
+              <span class="highlight-last"
+                >the world's most powerful learning library</span
+              >, on-demand, immersive, and <strong>free with ads</strong> —
+              making the KV headset the
+              <span class="highlight-last"
+                >highest-value education product available at home.</span
+              >
+            </p>
+            <p>This is no longer just a VR headset.</p>
+            <p>
+              <strong
+                >It's an entire universe of learning — included in your $1,999
+                purchase.</strong
+              >
+            </p>
           </div>
         </div>
       </div>
