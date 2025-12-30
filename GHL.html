@@ -1135,34 +1135,43 @@
 
       .ghl-lab-card {
         background-color: #e0effa;
-        border-radius: 8px;
-        padding: 15px;
+        border-radius: 12px;
+        padding: 20px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
+        gap: 12px;
         transition: transform 0.2s ease;
+        border: 1px solid #c8e2f5;
+      }
+
+      .ghl-lab-card:hover {
+        transform: translateY(-5px);
+        background-color: #d1e9f8;
       }
 
       .ghl-full-width {
         width: 100%;
         margin-bottom: 25px;
+        box-sizing: border-box;
       }
 
-      /* Icon Placeholders (Use your own SVGs or FontAwesome here) */
+      /* Icon Styles */
       .ghl-icon-box {
-        width: 30px;
-        height: 30px;
+        width: 45px;
+        height: 45px;
         background-color: #3b82f6;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+        color: white;
+        font-size: 20px;
+        box-shadow: 0 4px 6px rgba(59, 130, 246, 0.2);
       }
 
       .ghl-lab-name {
-        font-size: 18px;
-        font-weight: 600;
+        font-size: 16px;
+        font-weight: 700;
         color: #384653;
       }
 
@@ -1172,6 +1181,7 @@
         border-radius: 12px;
         overflow: hidden;
         margin-top: 10px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
       }
 
       .ghl-labs-hero-img {
@@ -1181,92 +1191,19 @@
         object-fit: cover;
       }
 
-      /* Tablet */
-      @media (max-width: 992px) {
-        .ghl-labs-container {
-          padding: 30px 20px;
-          border-radius: 20px;
-        }
-
-        .ghl-labs-title {
-          font-size: 24px;
-        }
-
-        .ghl-labs-subtitle {
-          font-size: 16px;
-        }
-
-        .ghl-labs-grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 12px;
-        }
-
-        .ghl-lab-card {
-          padding: 12px;
-        }
-
-        .ghl-lab-name {
-          font-size: 16px;
-        }
-
-        .ghl-icon-box {
-          width: 26px;
-          height: 26px;
-        }
-      }
-
-      /* Mobile */
+      /* Mobile Responsiveness */
       @media (max-width: 768px) {
         .ghl-labs-grid {
-          grid-template-columns: 1fr;
-          gap: 12px;
-        }
-
-        .ghl-labs-container {
-          padding: 25px 15px;
-        }
-
-        .ghl-labs-title {
-          font-size: 22px;
-          text-align: center;
-        }
-
-        .ghl-labs-subtitle {
-          font-size: 15px;
-          text-align: center;
-        }
-
-        .ghl-lab-card {
-          width: 100%;
-          padding: 12px;
-        }
-
-        .ghl-labs-image-wrapper {
-          margin-top: 15px;
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
-      /* Extra Small Mobile */
       @media (max-width: 480px) {
+        .ghl-labs-grid {
+          grid-template-columns: 1fr;
+        }
         .ghl-labs-container {
-          padding: 20px 12px;
-        }
-
-        .ghl-labs-title {
-          font-size: 20px;
-        }
-
-        .ghl-labs-subtitle {
-          font-size: 14px;
-        }
-
-        .ghl-lab-name {
-          font-size: 14px;
-        }
-
-        .ghl-icon-box {
-          width: 22px;
-          height: 22px;
+          padding: 20px;
         }
       }
 
@@ -3136,6 +3073,196 @@
         }
       }
 
+      /* section 26 new css */
+      .newd-container {
+        max-width: 900px;
+        margin: 0 auto;
+        background: #ffffff;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      /* =========================
+   Header Background
+========================= */
+      .newd-header {
+        width: 100%;
+        height: 250px;
+        background-image: url("https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/1cv/pmu/n1g/section26.avif");
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        clip-path: ellipse(100% 85% at 50% 15%);
+      }
+
+      /* =========================
+   Content
+========================= */
+      .newd-content {
+        padding: 40px;
+      }
+
+      .newd-main-title {
+        color: #2e3c4e;
+        font-size: 28px;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .newd-subtitle {
+        font-size: 14px;
+        text-align: left;
+        color: #384653;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .newd-description {
+        margin-bottom: 30px;
+        text-align: left;
+        font-size: 14px;
+        color: #384653;
+      }
+
+      .newd-section-title {
+        font-size: 22px;
+        color: #384653;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 25px;
+      }
+
+      /* =========================
+   Steps Grid
+========================= */
+      .newd-steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .newd-step-card {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* =========================
+   Progress + Icon
+========================= */
+      .newd-progress-wrap {
+        position: relative;
+        margin-bottom: 25px;
+      }
+
+      .newd-step-icon {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-290%);
+        width: 38px;
+        height: 38px;
+        background: #ceeafc;
+        border: 3px solid #ceeafc;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        color: #1e293b;
+        z-index: 2;
+      }
+
+      .newd-progress-bar {
+        height: 8px;
+        background: #e2e8f0;
+        border-radius: 10px;
+      }
+
+      .newd-progress-bar span {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #ceeafc;
+        border-radius: 10px;
+      }
+
+      /* =========================
+   Step Text
+========================= */
+      .newd-step-title {
+        font-size: 18px;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #384653;
+      }
+
+      .newd-step-text {
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: left;
+      }
+
+      .newd-list {
+        padding-left: 18px;
+        font-size: 13px;
+        text-align: left;
+        margin: 0;
+      }
+
+      /* =========================
+   Features
+========================= */
+      .newd-features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .newd-feature-item {
+        font-weight: 700;
+        text-align: left;
+        font-size: 14px;
+      }
+
+      /* =========================
+   Bottom Section
+========================= */
+
+      .newd-bottom-title {
+        font-size: 22px;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+
+      .nwed-bottom-para {
+        font-size: 14px;
+        text-align: left;
+      }
+
+      /* =========================
+   Responsive
+========================= */
+      @media (max-width: 600px) {
+        .newd-content {
+          padding: 25px;
+        }
+
+        .newd-header {
+          height: 220px;
+          clip-path: ellipse(120% 90% at 50% 10%);
+        }
+
+        .newd-main-title {
+          font-size: 24px;
+        }
+
+        .newd-features-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
       /* section 22 css */
 
       .zasd-popup-container {
@@ -4252,39 +4379,58 @@
 
         <div class="ghl-labs-grid">
           <div class="ghl-lab-card">
-            <div class="ghl-icon-box chemistry-icon"></div>
+            <div class="ghl-icon-box">
+              <i class="fa-solid fa-flask-vial"></i>
+            </div>
             <span class="ghl-lab-name">Chemistry</span>
           </div>
+
           <div class="ghl-lab-card">
-            <div class="ghl-icon-box biology-icon"></div>
+            <div class="ghl-icon-box">
+              <i class="fa-solid fa-dna"></i>
+            </div>
             <span class="ghl-lab-name">Biology</span>
           </div>
+
           <div class="ghl-lab-card">
-            <div class="ghl-icon-box anatomy-icon"></div>
+            <div class="ghl-icon-box">
+              <i class="fa-solid fa-lungs"></i>
+            </div>
             <span class="ghl-lab-name">Anatomy</span>
           </div>
+
           <div class="ghl-lab-card">
-            <div class="ghl-icon-box engineering-icon"></div>
+            <div class="ghl-icon-box">
+              <i class="fa-solid fa-gears"></i>
+            </div>
             <span class="ghl-lab-name">Engineering</span>
           </div>
+
           <div class="ghl-lab-card">
-            <div class="ghl-icon-box earth-icon"></div>
+            <div class="ghl-icon-box">
+              <i class="fa-solid fa-earth-americas"></i>
+            </div>
             <span class="ghl-lab-name">Earth Science</span>
           </div>
+
           <div class="ghl-lab-card">
-            <div class="ghl-icon-box astronomy-icon"></div>
+            <div class="ghl-icon-box">
+              <i class="fa-solid fa-user-astronaut"></i>
+            </div>
             <span class="ghl-lab-name">Astronomy</span>
           </div>
         </div>
 
         <div class="ghl-lab-card ghl-full-width">
-          <div class="ghl-icon-box space-icon"></div>
+          <div class="ghl-icon-box">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
           <span class="ghl-lab-name">Space Exploration</span>
         </div>
 
         <div class="ghl-labs-image-wrapper">
           <img
-            src="https://d15k2d11r6t6rl.cloudfront.net/pub/1uiz/aoc0dbjr/kgr/z4o/86g/Gemini_Generated_Image_3t26vi3t26vi3t26.png"
+            src="section8.png"
             alt="Student using VR in Science Lab"
             class="ghl-labs-hero-img"
           />
@@ -5232,6 +5378,118 @@
                 financial and career systems.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- section 26 new html -->
+      <div class="newd-container">
+        <!-- Header -->
+        <div class="newd-header"></div>
+
+        <!-- Content -->
+        <div class="newd-content">
+          <h1 class="newd-main-title">
+            “I’m Not Tech-Savvy” — We’ve Already Solved That
+          </h1>
+          <p class="newd-subtitle">
+            You do NOT need to be technical to use KreditVerse.
+          </p>
+          <p class="newd-description">
+            This is one of the most common concerns we hear — and it's exactly
+            why we built
+            <strong>guided setup + real human support</strong> into the system.
+          </p>
+
+          <h2 class="newd-section-title">
+            Here’s how setup works (simple by design):
+          </h2>
+
+          <div class="newd-steps-grid">
+            <!-- Step 1 -->
+            <div class="newd-step-card">
+              <div class="newd-progress-wrap">
+                <div class="newd-step-icon">📱</div>
+                <div class="newd-progress-bar"><span></span></div>
+              </div>
+              <h3 class="newd-step-title">Step 1: Scan & Start</h3>
+              <p class="newd-step-text">
+                Every KreditVerse system includes a
+                <strong>QR code</strong> that walks you through setup
+                step-by-step — no guessing, no stress.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="newd-step-card">
+              <div class="newd-progress-wrap">
+                <div class="newd-step-icon">☎️</div>
+                <div class="newd-progress-bar"><span></span></div>
+              </div>
+              <h3 class="newd-step-title">Step 2: Real Human Help</h3>
+              <p class="newd-step-text">
+                If you prefer not to set it up yourself,
+                <strong> you don’t have to.</strong>
+              </p>
+              <p class="newd-step-text">
+                Call our <strong>800-number</strong> and get live assistance.
+              </p>
+              <ul class="newd-list">
+                <li>Live setup help</li>
+                <li>Plain-language guidance</li>
+                <li>No tech skills required</li>
+              </ul>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="newd-step-card">
+              <div class="newd-progress-wrap">
+                <div class="newd-step-icon">🛡️</div>
+                <div class="newd-progress-bar"><span></span></div>
+              </div>
+              <h3 class="newd-step-title">Step 3: White-Glove Support</h3>
+              <p class="newd-step-text">Setup isn’t a one-time event.</p>
+              <p class="newd-step-text">
+                Every KreditVerse system includes
+                <strong>
+                  12 months of white-glove onboarding and unlimited support
+                  calls,</strong
+                >
+                so you’re never left wondering:
+              </p>
+              <ul class="newd-list">
+                <li>Help anytime</li>
+                <li>Changes handled for you</li>
+                <li>Peace of mind included</li>
+              </ul>
+              <p class="newd-step-text">We stay with you.</p>
+            </div>
+          </div>
+
+          <h2 class="newd-section-title">
+            This Is Why Families Actually Use the System
+          </h2>
+
+          <div class="newd-features-grid">
+            <div class="newd-feature-item">→ Guided setup</div>
+            <div class="newd-feature-item">→ QR-based walkthrough</div>
+            <div class="newd-feature-item">→ Real human support</div>
+            <div class="newd-feature-item">→ 12 months assistance</div>
+          </div>
+
+          <div class="newd-bottom-line">
+            <p class="nwed-bottom-para">No tech experience required.</p>
+            <p class="nwed-bottom-para">No frustration.</p>
+            <p class="nwed-bottom-para">No wasted purchase.</p>
+          </div>
+
+          <div class="newd-bottom-line">
+            <h3 class="newd-bottom-title">Bottom Line</h3>
+            <p class="nwed-bottom-para">
+              If you can scan a QR code or make a phone call,
+              <strong>you can use KreditVerse.</strong>
+            </p>
+            <p class="nwed-bottom-para">We handle the rest.</p>
           </div>
         </div>
       </div>
