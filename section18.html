@@ -1,307 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Email Capture - Lead Magnet</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        .bh1-body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #89CFF0 0%, #4A90E2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+      .bh1-body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #89cff0 0%, #4a90e2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
 
+      .bh1-container {
+        background: white;
+        border-radius: 24px;
+        padding: 60px 60px;
+        max-width: 900px;
+        width: 100%;
+        box-shadow: 4px 1px 0px 8px #6fb1e3;
+      }
+
+      .bh1-header {
+        text-align: left;
+        margin-bottom: 8px;
+      }
+
+      .bh1-subtitle {
+        color: #75bae6;
+        font-size: 18px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 8px;
+      }
+
+      .bh1-pretitle {
+        color: #2e3c4e;
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 12px;
+      }
+
+      .bh1-title {
+        color: #2e3c4e;
+        font-size: 42px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.2;
+        margin-bottom: 35px;
+      }
+
+      .bh1-title-highlight {
+        color: #4a90e2;
+      }
+
+      .bh1-includes-title {
+        color: #2e3c4e;
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .bh1-list {
+        list-style: none;
+        margin-bottom: 35px;
+        text-align: left;
+      }
+
+      .bh1-list-item {
+        color: #5a6c7d;
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        padding-left: 24px;
+        position: relative;
+      }
+
+      .bh1-list-item::before {
+        content: ".";
+        position: absolute;
+        left: 0;
+        color: #4a90e2;
+        font-weight: 700;
+        font-size: 16px;
+      }
+
+      .bh1-form {
+        margin-bottom: 15px;
+      }
+
+      .bh1-input-group {
+        background: #bedff3;
+        border-radius: 12px;
+        padding: 15px 30px;
+        margin-bottom: 18px;
+      }
+
+      .bh1-input {
+        width: 100%;
+        border: none;
+        background: transparent;
+        color: #2c3e50;
+        font-size: 15px;
+        padding: 8px 0;
+        outline: none;
+        font-weight: 500;
+      }
+
+      .bh1-input::placeholder {
+        color: #5a6c7d;
+      }
+
+      .bh1-button {
+        background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
+        color: #384653;
+        border: none;
+        border-radius: 8px;
+        padding: 14px 32px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+      }
+
+      .bh1-footer {
+        text-align: left;
+        color: #384653;
+        font-size: 12px;
+        margin-top: 12px;
+      }
+
+      /* Media Queries for Responsive Design */
+      @media (max-width: 768px) {
         .bh1-container {
-            background: white;
-            border-radius: 24px;
-            padding: 60px 60px;
-            max-width: 900px;
-            width: 100%;
-            box-shadow: 4px 1px 0px 8px #6fb1e3;
-        }
-
-        .bh1-header {
-            text-align: left;
-            margin-bottom: 8px;
+          padding: 40px 35px;
+          border-radius: 20px;
         }
 
         .bh1-subtitle {
-            color: #75BAE6;
-            font-size: 18px;
-            font-weight: 700;
-            text-transform: uppercase;
-            text-align: left;
-            margin-bottom: 8px;
+          font-size: 12px;
         }
 
         .bh1-pretitle {
-            color: #2E3C4E;
-            font-size: 36px;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 12px;
+          font-size: 18px;
         }
 
         .bh1-title {
-            color: #2E3C4E;
-            font-size: 42px;
-            font-weight: 700;
-            text-align: center;
-            line-height: 1.2;
-            margin-bottom: 35px;
-        }
-
-        .bh1-title-highlight {
-            color: #4A90E2;
+          font-size: 32px;
+          margin-bottom: 28px;
         }
 
         .bh1-includes-title {
-            color: #2E3C4E;
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 18px;
-        }
-
-        .bh1-list {
-            list-style: none;
-            margin-bottom: 35px;
-            text-align: left;
+          font-size: 15px;
         }
 
         .bh1-list-item {
-            color: #5a6c7d;
-            font-size: 15px;
-            line-height: 1.6;
-            margin-bottom: 12px;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .bh1-list-item::before {
-            content: ".";
-            position: absolute;
-            left: 0;
-            color: #4A90E2;
-            font-weight: 700;
-            font-size: 16px;
-        }
-
-        .bh1-form {
-            margin-bottom: 15px;
+          font-size: 14px;
+          margin-bottom: 10px;
         }
 
         .bh1-input-group {
-            background: #BEDFF3;
-            border-radius: 12px;
-            padding: 15px 30px;
-            margin-bottom: 18px;
+          padding: 24px 26px;
         }
 
         .bh1-input {
-            width: 100%;
-            border: none;
-            background: transparent;
-            color: #2c3e50;
-            font-size: 15px;
-            padding: 8px 0;
-            outline: none;
-            font-weight: 500;
-        }
-
-        .bh1-input::placeholder {
-            color: #5a6c7d;
+          font-size: 14px;
         }
 
         .bh1-button {
-            background: linear-gradient(120deg, #3299db 0%, #cfe9f7 100%);
-            color: #384653;
-            border: none;
-            border-radius: 8px;
-            padding: 14px 32px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+          padding: 13px 28px;
+          font-size: 14px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .bh1-body {
+          padding: 15px;
         }
 
+        .bh1-container {
+          padding: 30px 25px;
+          border-radius: 16px;
+        }
+
+        .bh1-subtitle {
+          font-size: 11px;
+        }
+
+        .bh1-pretitle {
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
+        .bh1-title {
+          font-size: 26px;
+          margin-bottom: 24px;
+        }
+
+        .bh1-includes-title {
+          font-size: 14px;
+          margin-bottom: 15px;
+        }
+
+        .bh1-list {
+          margin-bottom: 28px;
+        }
+
+        .bh1-list-item {
+          font-size: 13px;
+          margin-bottom: 9px;
+          padding-left: 20px;
+        }
+
+        .bh1-list-item::before {
+          font-size: 14px;
+        }
+
+        .bh1-input-group {
+          padding: 20px 22px;
+          margin-bottom: 15px;
+        }
+
+        .bh1-input {
+          font-size: 14px;
+          padding: 6px 0;
+        }
+
+        .bh1-input:not(:last-child) {
+          margin-bottom: 14px;
+          padding-bottom: 14px;
+        }
+
+        .bh1-button {
+          width: 100%;
+          padding: 12px 24px;
+          font-size: 14px;
+        }
 
         .bh1-footer {
-            text-align: left;
-            color: #384653;
-            font-size: 12px;
-            margin-top: 12px;
+          font-size: 11px;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .bh1-container {
+          padding: 25px 20px;
         }
 
-        /* Media Queries for Responsive Design */
-        @media (max-width: 768px) {
-            .bh1-container {
-                padding: 40px 35px;
-                border-radius: 20px;
-            }
-
-            .bh1-subtitle {
-                font-size: 12px;
-            }
-
-            .bh1-pretitle {
-                font-size: 18px;
-            }
-
-            .bh1-title {
-                font-size: 32px;
-                margin-bottom: 28px;
-            }
-
-            .bh1-includes-title {
-                font-size: 15px;
-            }
-
-            .bh1-list-item {
-                font-size: 14px;
-                margin-bottom: 10px;
-            }
-
-            .bh1-input-group {
-                padding: 24px 26px;
-            }
-
-            .bh1-input {
-                font-size: 14px;
-            }
-
-            .bh1-button {
-                padding: 13px 28px;
-                font-size: 14px;
-            }
+        .bh1-title {
+          font-size: 23px;
         }
 
-        @media (max-width: 480px) {
-            .bh1-body {
-                padding: 15px;
-            }
-
-            .bh1-container {
-                padding: 30px 25px;
-                border-radius: 16px;
-            }
-
-            .bh1-subtitle {
-                font-size: 11px;
-            }
-
-            .bh1-pretitle {
-                font-size: 16px;
-                margin-bottom: 10px;
-            }
-
-            .bh1-title {
-                font-size: 26px;
-                margin-bottom: 24px;
-            }
-
-            .bh1-includes-title {
-                font-size: 14px;
-                margin-bottom: 15px;
-            }
-
-            .bh1-list {
-                margin-bottom: 28px;
-            }
-
-            .bh1-list-item {
-                font-size: 13px;
-                margin-bottom: 9px;
-                padding-left: 20px;
-            }
-
-            .bh1-list-item::before {
-                font-size: 14px;
-            }
-
-            .bh1-input-group {
-                padding: 20px 22px;
-                margin-bottom: 15px;
-            }
-
-            .bh1-input {
-                font-size: 14px;
-                padding: 6px 0;
-            }
-
-            .bh1-input:not(:last-child) {
-                margin-bottom: 14px;
-                padding-bottom: 14px;
-            }
-
-            .bh1-button {
-                width: 100%;
-                padding: 12px 24px;
-                font-size: 14px;
-            }
-
-            .bh1-footer {
-                font-size: 11px;
-            }
+        .bh1-input-group {
+          padding: 18px 20px;
         }
-
-        @media (max-width: 360px) {
-            .bh1-container {
-                padding: 25px 20px;
-            }
-
-            .bh1-title {
-                font-size: 23px;
-            }
-
-            .bh1-input-group {
-                padding: 18px 20px;
-            }
-        }
+      }
     </style>
-</head>
-<body class="bh1-body">
+  </head>
+  <body class="bh1-body">
     <div class="bh1-container">
-        <div class="bh1-header">
-            <div class="bh1-subtitle">EMAIL CAPTURE INLINE (Lead Magnet)</div>
-            <h2 class="bh1-pretitle">Not ready to enroll yet?</h2>
-            <h1 class="bh1-title">Get the <span class="bh1-title-highlight">FREE</span> Future-Ready Life Skills Guide.</h1>
-        </div>
+      <div class="bh1-header">
+        <div class="bh1-subtitle">EMAIL CAPTURE INLINE (Lead Magnet)</div>
+        <h2 class="bh1-pretitle">Not ready to enroll yet?</h2>
+        <h1 class="bh1-title">
+          Get the <span class="bh1-title-highlight">FREE</span> Future-Ready
+          Life Skills Guide.
+        </h1>
+      </div>
 
-        <div class="bh1-content">
-            <p class="bh1-includes-title">Includes:</p>
-            <ul class="bh1-list">
-                <li class="bh1-list-item">✓ 7 essential life skills schools don't teach</li>
-                <li class="bh1-list-item">✓ Simulation preview</li>
-                <li class="bh1-list-item">✓ Money mastery roadmap</li>
-                <li class="bh1-list-item">✓ Career exploration worksheet</li>
-                <li class="bh1-list-item">✓ Masterclass invitation</li>
-                <li class="bh1-list-item">✓ 3-module simulation sneak peek</li>
-            </ul>
-        </div>
+      <div class="bh1-content">
+        <p class="bh1-includes-title">Includes:</p>
+        <ul class="bh1-list">
+          <li class="bh1-list-item">
+            ✓ 7 essential life skills schools don't teach
+          </li>
+          <li class="bh1-list-item">✓ Simulation preview</li>
+          <li class="bh1-list-item">✓ Money mastery roadmap</li>
+          <li class="bh1-list-item">✓ Career exploration worksheet</li>
+          <li class="bh1-list-item">✓ Masterclass invitation</li>
+          <li class="bh1-list-item">✓ 3-module simulation sneak peek</li>
+        </ul>
+      </div>
 
-        <form class="bh1-form" id="bh1-lead-form">
-            <div class="bh1-input-group">
-                <input type="text" class="bh1-input" placeholder="[ Name ]" id="bh1-name" required>
-                <input type="email" class="bh1-input" placeholder="[ Email ]" id="bh1-email" required>
-            </div>
-            <button type="submit" class="bh1-button">Get the Free Guide</button>
-        </form>
-
-        <div class="bh1-footer">
-            We respect your inbox.
+      <form class="bh1-form" id="bh1-lead-form">
+        <div class="bh1-input-group">
+          <input
+            type="text"
+            class="bh1-input"
+            placeholder="[ Name ]"
+            id="bh1-name"
+            required
+          />
+          <input
+            type="email"
+            class="bh1-input"
+            placeholder="[ Email ]"
+            id="bh1-email"
+            required
+          />
         </div>
+        <button type="submit" class="bh1-button">Get the Free Guide</button>
+      </form>
+
+      <div class="bh1-footer">We respect your inbox.</div>
     </div>
-
-</body>
+  </body>
 </html>
